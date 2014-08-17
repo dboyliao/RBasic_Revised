@@ -45,7 +45,7 @@ It is cool to be a hacker!!<br>
 
 ---
 
-## Mini Project: Barnsley Fern Fractal
+## Mini Project I: Barnsley Fern Fractal
 
 <font size = '6'>
 Work this cool picture out.
@@ -57,7 +57,7 @@ Work this cool picture out.
 
 ---
 
-## Mini Project: Barnsley Fern Fractal
+## Mini Project I: Barnsley Fern Fractal
 
 <font size = '6'>
 Work this cool picture out. <br>
@@ -65,6 +65,12 @@ And you can claim that you can do sketch by a computer!
 </font>
 
 <img src="assets/img/Barnsley.gif" height="70%" width="70%" />
+
+---
+
+## Mini Project II: Battleship
+
+<img src=assets/img/battle_ship.gif" height="25%" width="25%" />
 
 ---
 
