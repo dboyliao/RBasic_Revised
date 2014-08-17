@@ -1,0 +1,62 @@
+img.fit100 {
+  max-width:100%;
+  max-height:100%;
+};
+
+img.fit50 {
+  max-width:50%;
+  max-height:50%;
+};
+/* copy from https://github.com/asimihsan/going_faster_with_python/blob/9dd25b5638ad73c0e2154024079379dc5f711d18/doc/presentation/slidify/assets/css/aicustom1.css */
+
+/*
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,400italic,600italic,700italic,900italic&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700&subset=latin,latin-ext);
+*/
+
+slide:not(.segue) h2,
+slide:not(.segue) h3,
+slides slide.large article p,
+article p, article li, article li.build {
+    font-family: 'Source Sans Pro', 'Helvetica', 'Crimson Text', 'Garamond', 'Palatino', sans-serif;
+}
+
+slides slide.large article p {
+    font-size: 52px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.1em;
+}
+
+/* http://labs.voronianski.com/css3-grayscale/ */
+img.grayscale {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(grayscale.svg); /* Firefox 4+ */
+  filter: gray; /* IE 6-9 */
+  opacity: 0.3;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+img.logo {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(grayscale.svg); /* Firefox 4+ */
+  filter: gray; /* IE 6-9 */
+  opacity: 0.3;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15%;
+}ls

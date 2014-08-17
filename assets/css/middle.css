@@ -1,0 +1,15 @@
+slide:not(.segue) h2,
+slide:not(.segue) h3,
+slides slide.large article p,
+article p, article li, article li.build {
+    font-family: 'Source Sans Pro', 
+    'Helvetica', 'Crimson Text', 'Garamond', 
+    'Palatino', sans-serif;
+}
+
+slides slide.large article p {
+    font-size: 52px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.2em;
+}
