@@ -7,7 +7,7 @@ framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : [quiz, bootstrap, interactive, mathjax] # {mathjax, quiz, bootstrap}
-mode        : draft # {standalone, draft, selfcontained}
+mode        : selfcontained # {standalone, draft, selfcontained}
 logo        : Taiwan-R-logo.png
 github:
   user: dboyliao
