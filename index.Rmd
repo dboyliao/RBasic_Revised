@@ -70,7 +70,7 @@ And you can claim that you can do sketch by a computer!
 
 ## Mini Project II: Battleship
 
-<img src=assets/img/battle_ship.gif" height="25%" width="25%" />
+<img src="assets/img/battle_ship.gif" height="25%" width="25%" />
 
 ---
 
