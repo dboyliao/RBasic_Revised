@@ -292,10 +292,16 @@ bol3 <- F
 
 ```r
 a <- NA
-a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
+a == NA     # 要用 is.na(a) 才會傳回
 ```
 
 [1] NA
+
+```r
+is.na(a)
+```
+
+[1] TRUE
 
 
 ---

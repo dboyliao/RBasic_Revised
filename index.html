@@ -483,10 +483,15 @@ bol3 &lt;- F
 <p>[1] FALSE</p>
 
 <pre><code class="r">a &lt;- NA
-a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
+a == NA     # 要用 is.na(a) 才會傳回
 </code></pre>
 
 <p>[1] NA</p>
+
+<pre><code class="r">is.na(a)
+</code></pre>
+
+<p>[1] TRUE</p>
 
   </article>
   <!-- Presenter Notes -->
