@@ -1600,11 +1600,9 @@ ind <- order(iris[1:12, "Sepal.Length"], iris[1:12, "Sepal.Width"])
 
 ## Play With It And You Will Master It!
 
-我們用房貸餘額資料來練習!
+我們用房貸餘額資料來練習! (cl_info_other.csv)
 
 `之後會在 ETL 課程再度碰到它，也會學到進階的資料處理技巧。`
-
-到[這裡](https://dl.dropboxusercontent.com/u/5487490/MLDM%20Monday/RBasic/cl_info_other.csv)下載檔案。(cl_info_other.csv)
 
 
 ---
@@ -1615,10 +1613,10 @@ ind <- order(iris[1:12, "Sepal.Length"], iris[1:12, "Sepal.Width"])
 
 ```r
 # read.table 小技巧。
-tmp <- read.table('cl_info_other.csv', sep = ',',
-                 stringsAsFactors = F, header = T, nrows = 1000)
+tmp <- read.table(DSC2014Tutorial::ETL_file('cl_info_other.csv'), sep = ',',
+                 stringsAsFactors = F, header = T, nrows = 100)
 colClasses <- sapply(tmp, class)
-DF <- read.table('cl_info_other.csv', sep = ',',
+DF <- read.table(DSC2014Tutorial::ETL_file('cl_info_other.csv'), sep = ',',
                  header = T, colClasses = colClasses)
 ```
 

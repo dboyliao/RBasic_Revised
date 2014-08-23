@@ -2199,11 +2199,9 @@ iris[1:3, ]
     <h2>Play With It And You Will Master It!</h2>
   </hgroup>
   <article data-timings="">
-    <p>我們用房貸餘額資料來練習!</p>
+    <p>我們用房貸餘額資料來練習! (cl_info_other.csv)</p>
 
 <p><code>之後會在 ETL 課程再度碰到它，也會學到進階的資料處理技巧。</code></p>
-
-<p>到<a href="https://dl.dropboxusercontent.com/u/5487490/MLDM%20Monday/RBasic/cl_info_other.csv">這裡</a>下載檔案。(cl_info_other.csv)</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -2216,10 +2214,10 @@ iris[1:3, ]
   </hgroup>
   <article data-timings="">
     <pre><code class="r"># read.table 小技巧。
-tmp &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
-                 stringsAsFactors = F, header = T, nrows = 1000)
+tmp &lt;- read.table(DSC2014Tutorial::ETL_file(&#39;cl_info_other.csv&#39;), sep = &#39;,&#39;,
+                 stringsAsFactors = F, header = T, nrows = 100)
 colClasses &lt;- sapply(tmp, class)
-DF &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
+DF &lt;- read.table(DSC2014Tutorial::ETL_file(&#39;cl_info_other.csv&#39;), sep = &#39;,&#39;,
                  header = T, colClasses = colClasses)
 </code></pre>
 
