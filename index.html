@@ -1322,12 +1322,18 @@ iris
   <article data-timings="">
     <pre><code class="r">my_list &lt;- list(Age = c(17, 22, 38), B.Type = c(&quot;A&quot;, &quot;B&quot;, &quot;O&quot;))
 (my_data &lt;- as.data.frame(my_list))
+str(my_data)
 </code></pre>
 
 <pre><code>##   Age B.Type
 ## 1  17      A
 ## 2  22      B
 ## 3  38      O
+</code></pre>
+
+<pre><code>## &#39;data.frame&#39;:    3 obs. of  2 variables:
+##  $ Age   : num  17 22 38
+##  $ B.Type: Factor w/ 3 levels &quot;A&quot;,&quot;B&quot;,&quot;O&quot;: 1 2 3
 </code></pre>
 
   </article>

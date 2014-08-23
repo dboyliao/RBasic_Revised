@@ -712,6 +712,7 @@ iris
 ```{r, results='hold'}
 my_list <- list(Age = c(17, 22, 38), B.Type = c("A", "B", "O"))
 (my_data <- as.data.frame(my_list))
+str(my_data)
 ```
 
 ---

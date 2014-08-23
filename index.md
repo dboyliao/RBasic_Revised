@@ -906,6 +906,7 @@ iris
 ```r
 my_list <- list(Age = c(17, 22, 38), B.Type = c("A", "B", "O"))
 (my_data <- as.data.frame(my_list))
+str(my_data)
 ```
 
 ```
@@ -913,6 +914,12 @@ my_list <- list(Age = c(17, 22, 38), B.Type = c("A", "B", "O"))
 ## 1  17      A
 ## 2  22      B
 ## 3  38      O
+```
+
+```
+## 'data.frame':	3 obs. of  2 variables:
+##  $ Age   : num  17 22 38
+##  $ B.Type: Factor w/ 3 levels "A","B","O": 1 2 3
 ```
 
 ---
