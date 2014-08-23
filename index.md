@@ -292,7 +292,7 @@ bol3 <- F
 
 ```r
 a <- NA
-a == NA     # 要用 is.na(a) 才會傳回TRUE或FALSE。(另外還有 )
+a == NA     # 要用is.na(a)才會傳回TRUE或FALSE。(另外還有 )
 ```
 
 [1] NA
@@ -2484,6 +2484,20 @@ print('I love R!'); cat('I love R!')
                                     cat('You miss.')
                                     trial <- trial + 1
                             }
+
+---
+
+## Battleship 成品範例 (續)
+
+                            if (trial >= num_guess){
+                                    cat('You loss.')
+                            }
+                    } else {
+                            cat('Invalid x or y coordinate.')
+                    }
+            }
+        
+    }
 
 --- .segue bg:green
 

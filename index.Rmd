@@ -1826,6 +1826,20 @@ print('I love R!'); cat('I love R!')
                                     trial <- trial + 1
                             }
 
+---
+
+## Battleship 成品範例 (續)
+
+                            if (trial >= num_guess){
+                                    cat('You loss.')
+                            }
+                    } else {
+                            cat('Invalid x or y coordinate.')
+                    }
+            }
+        
+    }
+
 --- .segue bg:green
 
 ## Help Yourself by Yourself
