@@ -1446,7 +1446,7 @@ Note: **else if** and **else** are optional.
 
 One simple way to get the data if you're using our package.
 
-```{r, results='hide'}
+```{r, results='hold'}
 data("RBasic_ForLoop_Ex")
 ```
 
@@ -1455,9 +1455,9 @@ data("RBasic_ForLoop_Ex")
 
 ## Exercise: SVM Classifier
 
-> 1. 計算 X1 中某一筆資料與 magic_vector 內積的結果，並儲存為 inner。<br> **(** sum(X1[i, ] * magic_vector), i 可以是1~100任何一個整數 **)**
-> 2. 如果 inner 大於或等於 0，print('setosa');反之，print('versicolor')
-> 3. 執行 print(y1[i])，有何發現？
+1. 計算 X1 中某一筆資料與 magic_vector 內積的結果，並儲存為 inner。<br> **(** sum(X1[i, ] * magic_vector), i 可以是1~100任何一個整數 **)**
+2. 如果 inner 大於或等於 0，print('setosa');反之，print('versicolor')
+3. 執行 print(y1[i])，有何發現？
 
 ---
 
@@ -1844,58 +1844,12 @@ print('I love R!'); cat('I love R!')
 
 ---
 
-## Battleship 成品範例 (1/3)
+## Battleship 成品範例 
 
-    battleship <- function(num_guess = 5, cheat = F){
-            ship_x <- sample.int(5, size = 1)
-            ship_y <- sample.int(5, size = 1)
-            if (cheat){
-                    print(ship_x)
-                    print(ship_y)
-            }
-            map =list(c('O', 'O', 'O', 'O', 'O'),
-                      c('O', 'O', 'O', 'O', 'O'),
-                      c('O', 'O', 'O', 'O', 'O'),
-                      c('O', 'O', 'O', 'O', 'O'),
-                      c('O', 'O', 'O', 'O', 'O'))
-            for (r in map){
-                    print(r)
-            }
-            trial <- 0
-
----
-
-## Battleship 成品範例 (2/3)
-
-        while (trial < num_guess){
-                    x <- as.numeric(readline('Guess the x:'))
-                    y <- as.numeric(readline('Guess the y:'))
-                    if (x <= 5 && y <= 5 && x > 0 && y > 0){ 
-                            map[[y]][x] <- 'X'
-                            for (r in map){
-                                    print(r)
-                            }
-                            if (x == ship_x & y == ship_y){
-                                    cat('Oh NO~~~You shrink my boat!!')
-                                    break
-                            } else{
-                                    cat('You miss.')
-                                    trial <- trial + 1
-                            }
-
----
-
-## Battleship 成品範例 (3/3)
-
-                            if (trial >= num_guess){
-                                    cat('You loss.')
-                            }
-                    } else {
-                            cat('Invalid x or y coordinate.')
-                    }
-            }
-        
-    }
+```{r, results='hide'}
+path <- DSC2014Tutorial::Basic_file("battleship_answer.R")
+utils::browseURL(path)
+```
 
 --- .segue bg:green
 

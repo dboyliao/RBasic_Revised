@@ -2027,9 +2027,9 @@ data("RBasic_ForLoop_Ex")
 
 ## Exercise: SVM Classifier
 
-> 1. 計算 X1 中某一筆資料與 magic_vector 內積的結果，並儲存為 inner。<br> **(** sum(X1[i, ] * magic_vector), i 可以是1~100任何一個整數 **)**
-> 2. 如果 inner 大於或等於 0，print('setosa');反之，print('versicolor')
-> 3. 執行 print(y1[i])，有何發現？
+1. 計算 X1 中某一筆資料與 magic_vector 內積的結果，並儲存為 inner。<br> **(** sum(X1[i, ] * magic_vector), i 可以是1~100任何一個整數 **)**
+2. 如果 inner 大於或等於 0，print('setosa');反之，print('versicolor')
+3. 執行 print(y1[i])，有何發現？
 
 ---
 
