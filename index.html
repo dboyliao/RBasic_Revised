@@ -2500,6 +2500,101 @@ as.numeric(Petal.W)
 <slide class="" id="slide-113" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
+    <h2>Build-in Function: factor()</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><font size="6">
+<code>Syntax: factor(?, ?)</code>
+</font></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-114" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Build-in Function: factor()</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><font size="6">
+<code>Syntax: factor(x, levels)</code>
+</font></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-115" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Build-in Function: factor()</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><font size="6">
+<code>Syntax: factor(x, levels)</code>
+</font></p>
+
+<p>Example:</p>
+
+<pre><code class="r">test_factor &lt;- c(1, 3, 3, 5, 2, 4, 2, 5)
+test_factor &lt;- factor(test_factor)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-116" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Build-in Function: factor()</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><font size="6">
+<code>Syntax: factor(x, levels)</code>
+</font></p>
+
+<p>Example:</p>
+
+<pre><code class="r">test_factor
+</code></pre>
+
+<pre><code>## [1] 1 3 3 5 2 4 2 5
+## Levels: 1 2 3 4 5
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-117" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Build-in Function: factor()</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><font size="6">
+<code>Syntax: factor(x, levels)</code>
+</font></p>
+
+<p>Example:</p>
+
+<pre><code class="r">levels(test_factor) &lt;- c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;)
+test_factor
+</code></pre>
+
+<pre><code>## [1] A C C E B D B E
+## Levels: A B C D E
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-118" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
     <h2>Pop Quiz</h2>
   </hgroup>
   <article data-timings="">
@@ -2533,7 +2628,7 @@ my_vector &lt;- Levels[as.numeric(my_factor)]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-114" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-119" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Loops</h2>
@@ -2544,7 +2639,7 @@ my_vector &lt;- Levels[as.numeric(my_factor)]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-115" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-120" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>For Loop</h2>
@@ -2555,7 +2650,7 @@ my_vector &lt;- Levels[as.numeric(my_factor)]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-116" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-121" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>For Loop</h2>
@@ -2585,7 +2680,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-117" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-122" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>剛剛的例子有點兒無聊....</h2>
@@ -2603,7 +2698,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-118" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-123" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>If Loop</h2>
@@ -2614,7 +2709,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-119" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-124" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>If Loop</h2>
@@ -2639,7 +2734,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-120" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-125" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
@@ -2654,7 +2749,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-121" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-126" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
@@ -2671,7 +2766,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-122" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-127" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
@@ -2688,7 +2783,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-123" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-128" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
@@ -2704,7 +2799,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-124" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-129" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
@@ -2720,7 +2815,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-125" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-130" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
@@ -2735,7 +2830,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-126" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-131" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>While Loop</h2>
@@ -2746,7 +2841,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-127" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-132" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>While Loop</h2>
@@ -2776,7 +2871,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-128" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-133" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>While Loop (Cont.)</h2>
@@ -2788,7 +2883,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-129" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-134" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>While Loop (Cont.)</h2>
@@ -2807,7 +2902,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-130" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-135" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Useful Functions</h2>
@@ -2826,7 +2921,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-131" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-136" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Basic Operation - Phase II</h2>
@@ -2837,7 +2932,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-132" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-137" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Arithmetic Operations</h2>
@@ -2848,7 +2943,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-133" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-138" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>+, -, *, /, %/%, %%</h2>
@@ -2876,7 +2971,7 @@ All these operations are vectorized. (element-by-element operation)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-134" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-139" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix Operations: Multiplication and Transpose</h2>
@@ -2901,7 +2996,7 @@ my_mat2 &lt;- matrix(runif(6), 3, 2)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-135" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-140" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix Operations: Solving Linear System</h2>
@@ -2931,7 +3026,7 @@ x^*= A^{-1} b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-136" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-141" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix Operations: Solving Linear System</h2>
@@ -2959,7 +3054,7 @@ x^*= A^{-1} b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-137" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-142" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix Operations: Solving Linear System</h2>
@@ -2980,7 +3075,7 @@ x^*= A^{-1} b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-138" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-143" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix Operations: Solving Linear System</h2>
@@ -3003,7 +3098,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-139" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-144" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix Operations: Solving Linear System</h2>
@@ -3030,7 +3125,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-140" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-145" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project I: Barnsley Fern Fractal</h2>
@@ -3041,7 +3136,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-141" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-146" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project I: Barnsley Fern Fractal</h2>
@@ -3064,7 +3159,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-142" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-147" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Barnsley Fern Fractal</h2>
@@ -3082,7 +3177,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-143" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-148" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Barnsley Fern Fractal: Tips</h2>
@@ -3098,7 +3193,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-144" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-149" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Barnsley Fern Fractal: Tips</h2>
@@ -3121,7 +3216,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-145" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-150" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Barnsley Fern Fractal: Tips</h2>
@@ -3145,7 +3240,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-146" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-151" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Function</h2>
@@ -3156,7 +3251,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-147" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-152" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Define Your Own Function</h2>
@@ -3182,7 +3277,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-148" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-153" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Define Your Own Operation</h2>
@@ -3201,7 +3296,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-149" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-154" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Define Your Own Operation</h2>
@@ -3220,7 +3315,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-150" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-155" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Default Values and Scoping Rule</h2>
@@ -3247,7 +3342,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-151" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-156" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Default Values and Scoping Rule</h2>
@@ -3276,7 +3371,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-152" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-157" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project II - Battleship</h2>
@@ -3287,7 +3382,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-153" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-158" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project II - Battleship</h2>
@@ -3299,7 +3394,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-154" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-159" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Battleship: Tips</h2>
@@ -3329,7 +3424,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-155" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-160" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Battleship: Tips</h2>
@@ -3343,7 +3438,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-156" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-161" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Some Function You Might Need</h2>
@@ -3383,7 +3478,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-157" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-162" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Battleship 成品範例</h2>
@@ -3411,7 +3506,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-158" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-163" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Battleship 成品範例 (續)</h2>
@@ -3438,7 +3533,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-159" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-164" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Battleship 成品範例 (續)</h2>
@@ -3459,7 +3554,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-160" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-165" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Help Yourself by Yourself</h2>
@@ -3470,7 +3565,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-161" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-166" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Why?</h2>
@@ -3486,7 +3581,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-162" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-167" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>But How?</h2>
@@ -3502,7 +3597,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-163" style="background:orange; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-168" style="background:orange; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Thanks for Your Attention!</h2>
@@ -4191,73 +4286,73 @@ A %*% A_inv_b
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=113 title='Pop Quiz'>
+        data-slide=113 title='Build-in Function: factor()'>
          113
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=114 title='Loops'>
+        data-slide=114 title='Build-in Function: factor()'>
          114
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=115 title='For Loop'>
+        data-slide=115 title='Build-in Function: factor()'>
          115
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=116 title='For Loop'>
+        data-slide=116 title='Build-in Function: factor()'>
          116
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=117 title='剛剛的例子有點兒無聊....'>
+        data-slide=117 title='Build-in Function: factor()'>
          117
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=118 title='If Loop'>
+        data-slide=118 title='Pop Quiz'>
          118
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=119 title='If Loop'>
+        data-slide=119 title='Loops'>
          119
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=120 title='Exercise: SVM Classifier'>
+        data-slide=120 title='For Loop'>
          120
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=121 title='Exercise: SVM Classifier'>
+        data-slide=121 title='For Loop'>
          121
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=122 title='Exercise: SVM Classifier'>
+        data-slide=122 title='剛剛的例子有點兒無聊....'>
          122
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=123 title='Exercise: SVM Classifier'>
+        data-slide=123 title='If Loop'>
          123
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=124 title='Exercise: SVM Classifier'>
+        data-slide=124 title='If Loop'>
          124
       </a>
     </li>
@@ -4269,230 +4364,260 @@ A %*% A_inv_b
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=126 title='While Loop'>
+        data-slide=126 title='Exercise: SVM Classifier'>
          126
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=127 title='While Loop'>
+        data-slide=127 title='Exercise: SVM Classifier'>
          127
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=128 title='While Loop (Cont.)'>
+        data-slide=128 title='Exercise: SVM Classifier'>
          128
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=129 title='While Loop (Cont.)'>
+        data-slide=129 title='Exercise: SVM Classifier'>
          129
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=130 title='Useful Functions'>
+        data-slide=130 title='Exercise: SVM Classifier'>
          130
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=131 title='Basic Operation - Phase II'>
+        data-slide=131 title='While Loop'>
          131
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=132 title='Arithmetic Operations'>
+        data-slide=132 title='While Loop'>
          132
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=133 title='+, -, *, /, %/%, %%'>
+        data-slide=133 title='While Loop (Cont.)'>
          133
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=134 title='Matrix Operations: Multiplication and Transpose'>
+        data-slide=134 title='While Loop (Cont.)'>
          134
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=135 title='Matrix Operations: Solving Linear System'>
+        data-slide=135 title='Useful Functions'>
          135
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=136 title='Matrix Operations: Solving Linear System'>
+        data-slide=136 title='Basic Operation - Phase II'>
          136
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=137 title='Matrix Operations: Solving Linear System'>
+        data-slide=137 title='Arithmetic Operations'>
          137
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=138 title='Matrix Operations: Solving Linear System'>
+        data-slide=138 title='+, -, *, /, %/%, %%'>
          138
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=139 title='Matrix Operations: Solving Linear System'>
+        data-slide=139 title='Matrix Operations: Multiplication and Transpose'>
          139
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=140 title='Mini Project I: Barnsley Fern Fractal'>
+        data-slide=140 title='Matrix Operations: Solving Linear System'>
          140
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=141 title='Mini Project I: Barnsley Fern Fractal'>
+        data-slide=141 title='Matrix Operations: Solving Linear System'>
          141
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=142 title='Barnsley Fern Fractal'>
+        data-slide=142 title='Matrix Operations: Solving Linear System'>
          142
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=143 title='Barnsley Fern Fractal: Tips'>
+        data-slide=143 title='Matrix Operations: Solving Linear System'>
          143
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=144 title='Barnsley Fern Fractal: Tips'>
+        data-slide=144 title='Matrix Operations: Solving Linear System'>
          144
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=145 title='Barnsley Fern Fractal: Tips'>
+        data-slide=145 title='Mini Project I: Barnsley Fern Fractal'>
          145
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=146 title='Function'>
+        data-slide=146 title='Mini Project I: Barnsley Fern Fractal'>
          146
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=147 title='Define Your Own Function'>
+        data-slide=147 title='Barnsley Fern Fractal'>
          147
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=148 title='Define Your Own Operation'>
+        data-slide=148 title='Barnsley Fern Fractal: Tips'>
          148
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=149 title='Define Your Own Operation'>
+        data-slide=149 title='Barnsley Fern Fractal: Tips'>
          149
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=150 title='Default Values and Scoping Rule'>
+        data-slide=150 title='Barnsley Fern Fractal: Tips'>
          150
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=151 title='Default Values and Scoping Rule'>
+        data-slide=151 title='Function'>
          151
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=152 title='Mini Project II - Battleship'>
+        data-slide=152 title='Define Your Own Function'>
          152
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=153 title='Mini Project II - Battleship'>
+        data-slide=153 title='Define Your Own Operation'>
          153
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=154 title='Battleship: Tips'>
+        data-slide=154 title='Define Your Own Operation'>
          154
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=155 title='Battleship: Tips'>
+        data-slide=155 title='Default Values and Scoping Rule'>
          155
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=156 title='Some Function You Might Need'>
+        data-slide=156 title='Default Values and Scoping Rule'>
          156
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=157 title='Battleship 成品範例'>
+        data-slide=157 title='Mini Project II - Battleship'>
          157
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=158 title='Battleship 成品範例 (續)'>
+        data-slide=158 title='Mini Project II - Battleship'>
          158
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=159 title='Battleship 成品範例 (續)'>
+        data-slide=159 title='Battleship: Tips'>
          159
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=160 title='Help Yourself by Yourself'>
+        data-slide=160 title='Battleship: Tips'>
          160
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=161 title='Why?'>
+        data-slide=161 title='Some Function You Might Need'>
          161
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=162 title='But How?'>
+        data-slide=162 title='Battleship 成品範例'>
          162
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=163 title='Thanks for Your Attention!'>
+        data-slide=163 title='Battleship 成品範例 (續)'>
          163
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=164 title='Battleship 成品範例 (續)'>
+         164
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=165 title='Help Yourself by Yourself'>
+         165
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=166 title='Why?'>
+         166
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=167 title='But How?'>
+         167
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=168 title='Thanks for Your Attention!'>
+         168
       </a>
     </li>
   </ul>

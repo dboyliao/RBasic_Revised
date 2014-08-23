@@ -1815,6 +1815,76 @@ as.numeric(Petal.W)
 <img src="assets/img/Factor.png" width="70%" height="70%">
 </center>
 
+---
+
+## Build-in Function: factor()
+
+<font size="6">
+`Syntax: factor(?, ?)`
+</font>
+
+---
+
+## Build-in Function: factor()
+
+<font size="6">
+`Syntax: factor(x, levels)`
+</font>
+
+---
+
+## Build-in Function: factor()
+
+<font size="6">
+`Syntax: factor(x, levels)`
+</font>
+
+Example:
+
+```r
+test_factor <- c(1, 3, 3, 5, 2, 4, 2, 5)
+test_factor <- factor(test_factor)
+```
+
+---
+
+## Build-in Function: factor()
+
+<font size="6">
+`Syntax: factor(x, levels)`
+</font>
+
+Example:
+
+```r
+test_factor
+```
+
+```
+## [1] 1 3 3 5 2 4 2 5
+## Levels: 1 2 3 4 5
+```
+
+---
+
+## Build-in Function: factor()
+
+<font size="6">
+`Syntax: factor(x, levels)`
+</font>
+
+Example:
+
+```r
+levels(test_factor) <- c("A", "B", "C", "D", "E")
+test_factor
+```
+
+```
+## [1] A C C E B D B E
+## Levels: A B C D E
+```
+
 --- &radio
 
 ## Pop Quiz
