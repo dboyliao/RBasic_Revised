@@ -2521,7 +2521,7 @@ print('I love R!'); cat('I love R!')
 
 ---
 
-## Battleship 成品範例
+## Battleship 成品範例 (1/3)
 
     battleship <- function(num_guess = 5, cheat = F){
             ship_x <- sample.int(5, size = 1)
@@ -2542,7 +2542,7 @@ print('I love R!'); cat('I love R!')
 
 ---
 
-## Battleship 成品範例 (續)
+## Battleship 成品範例 (2/3)
 
         while (trial < num_guess){
                     x <- as.numeric(readline('Guess the x:'))
@@ -2562,7 +2562,7 @@ print('I love R!'); cat('I love R!')
 
 ---
 
-## Battleship 成品範例 (續)
+## Battleship 成品範例 (3/3)
 
                             if (trial >= num_guess){
                                     cat('You loss.')
