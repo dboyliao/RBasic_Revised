@@ -1444,11 +1444,12 @@ Note: **else if** and **else** are optional.
 
 ## Exercise: SVM Classifier
 
-<br>
+One simple way to get the data if you're using our package.
 
-<font size = 6''>
-[Data](https://dl.dropboxusercontent.com/u/5487490/MLDM%20Monday/RBasic/MLDM_RBasic_ForLoop_Ex.RData)
-</font>
+```{r, results='hide'}
+data("RBasic_ForLoop_Ex")
+```
+
 
 ---
 
