@@ -1680,20 +1680,6 @@ A %*% A_inv_b
 
 - 這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)
 
----
-
-## Barnsley Fern Fractal: Tips
-
-- 可以把迭代出來的點用一個 data.frame 存起來。(例如說存成 coor )
-
-- 最後用 plot(x = coor[, 2], y = coor[, 1], plt = c(0, 10, -5, 5), cex = 0.1, asp = 1) 把它畫出來。
-
-- 這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)
-
-<font size='6'>
-- [Template](https://dl.dropboxusercontent.com/u/5487490/RBasic/Barnsley_Fern_template.R)
-</font>
-
 
 ---
 
@@ -1705,11 +1691,44 @@ A %*% A_inv_b
 
 - 這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)
 
-- [Template](https://dl.dropboxusercontent.com/u/5487490/RBasic/Barnsley_Fern_template.R)
+
+---
+
+## Barnsley Fern Fractal: Template
+
+One simple way to open the template if you're using our package.
+
+```{r, results='hide'}
+path <- DSC2014Tutorial::Basic_file("barnsley_fern_template.R")
+utils::browseURL(path)
+```
+
+---
+
+## Barnsley Fern Fractal: Template
+
+One simple way to open the template if you're using our package.
+
+```{r, results='hide'}
+path <- DSC2014Tutorial::Basic_file("barnsley_fern_template.R")
+utils::browseURL(path)
+```
 
 <font size='6'>
 - `敬請期待 Data Visualization 教學課程。`
 </font>
+
+---
+
+## Barnsley Fern Fractal: The Answer
+
+Reference answer.
+
+```{r, results='hide'}
+path <- DSC2014Tutorial::Basic_file("barnsley_fern_answer.R")
+utils::browseURL(path)
+```
+
 
 --- .segue bg:navy
 
@@ -1818,9 +1837,14 @@ map =list(c('O', 'O', 'O', 'O', 'O'),
 
 ---
 
-## Battleship: Tips
+## Battleship: Template
 
-- [Template](https://dl.dropboxusercontent.com/u/5487490/RBasic/battleship_template.R)
+One simple way to open the template file if you are using our package.
+
+```{r, results='hide'}
+path <- DSC2014Tutorial::Basic_file("battleship_template.R")
+utils::browseURL(path)
+```
 
 
 ---

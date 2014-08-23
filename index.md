@@ -2307,20 +2307,6 @@ A %*% A_inv_b
 
 - 這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)
 
----
-
-## Barnsley Fern Fractal: Tips
-
-- 可以把迭代出來的點用一個 data.frame 存起來。(例如說存成 coor )
-
-- 最後用 plot(x = coor[, 2], y = coor[, 1], plt = c(0, 10, -5, 5), cex = 0.1, asp = 1) 把它畫出來。
-
-- 這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)
-
-<font size='6'>
-- [Template](https://dl.dropboxusercontent.com/u/5487490/RBasic/Barnsley_Fern_template.R)
-</font>
-
 
 ---
 
@@ -2332,11 +2318,47 @@ A %*% A_inv_b
 
 - 這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)
 
-- [Template](https://dl.dropboxusercontent.com/u/5487490/RBasic/Barnsley_Fern_template.R)
+
+---
+
+## Barnsley Fern Fractal: Template
+
+One simple way to open the template if you're using our package.
+
+
+```r
+path <- DSC2014Tutorial::Basic_file("barnsley_fern_template.R")
+utils::browseURL(path)
+```
+
+---
+
+## Barnsley Fern Fractal: Template
+
+One simple way to open the template if you're using our package.
+
+
+```r
+path <- DSC2014Tutorial::Basic_file("barnsley_fern_template.R")
+utils::browseURL(path)
+```
 
 <font size='6'>
 - `敬請期待 Data Visualization 教學課程。`
 </font>
+
+---
+
+## Barnsley Fern Fractal: The Answer
+
+Reference answer.
+
+
+```r
+path <- DSC2014Tutorial::Basic_file("barnsley_fern_answer.R")
+utils::browseURL(path)
+```
+
 
 --- .segue bg:navy
 
@@ -2482,9 +2504,15 @@ map =list(c('O', 'O', 'O', 'O', 'O'),
 
 ---
 
-## Battleship: Tips
+## Battleship: Template
 
-- [Template](https://dl.dropboxusercontent.com/u/5487490/RBasic/battleship_template.R)
+One simple way to open the template file if you are using our package.
+
+
+```r
+path <- DSC2014Tutorial::Basic_file("battleship_template.R")
+utils::browseURL(path)
+```
 
 
 ---
@@ -2504,7 +2532,7 @@ sample.int(5, 1)   # 從 1~5 中隨機抽取 1 個數字。
 ```
 
 ```
-## [1] 4
+## [1] 2
 ```
 
 - cat():
@@ -2523,58 +2551,13 @@ print('I love R!'); cat('I love R!')
 
 ---
 
-## Battleship 成品範例 (1/3)
+## Battleship 成品範例 
 
-    battleship <- function(num_guess = 5, cheat = F){
-            ship_x <- sample.int(5, size = 1)
-            ship_y <- sample.int(5, size = 1)
-            if (cheat){
-                    print(ship_x)
-                    print(ship_y)
-            }
-            map =list(c('O', 'O', 'O', 'O', 'O'),
-                      c('O', 'O', 'O', 'O', 'O'),
-                      c('O', 'O', 'O', 'O', 'O'),
-                      c('O', 'O', 'O', 'O', 'O'),
-                      c('O', 'O', 'O', 'O', 'O'))
-            for (r in map){
-                    print(r)
-            }
-            trial <- 0
 
----
-
-## Battleship 成品範例 (2/3)
-
-        while (trial < num_guess){
-                    x <- as.numeric(readline('Guess the x:'))
-                    y <- as.numeric(readline('Guess the y:'))
-                    if (x <= 5 && y <= 5 && x > 0 && y > 0){ 
-                            map[[y]][x] <- 'X'
-                            for (r in map){
-                                    print(r)
-                            }
-                            if (x == ship_x & y == ship_y){
-                                    cat('Oh NO~~~You shrink my boat!!')
-                                    break
-                            } else{
-                                    cat('You miss.')
-                                    trial <- trial + 1
-                            }
-
----
-
-## Battleship 成品範例 (3/3)
-
-                            if (trial >= num_guess){
-                                    cat('You loss.')
-                            }
-                    } else {
-                            cat('Invalid x or y coordinate.')
-                    }
-            }
-        
-    }
+```r
+path <- DSC2014Tutorial::Basic_file("battleship_answer.R")
+utils::browseURL(path)
+```
 
 --- .segue bg:green
 

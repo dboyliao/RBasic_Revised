@@ -3204,13 +3204,6 @@ A %*% A_inv_b
 <li><p>這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)</p></li>
 </ul>
 
-<p><font size='6'></p>
-
-<ul>
-<li><a href="https://dl.dropboxusercontent.com/u/5487490/RBasic/Barnsley_Fern_template.R">Template</a>
-</font></li>
-</ul>
-
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -3218,15 +3211,30 @@ A %*% A_inv_b
 <slide class="" id="slide-150" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Barnsley Fern Fractal: Tips</h2>
+    <h2>Barnsley Fern Fractal: Template</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li><p>可以把迭代出來的點用一個 data.frame 存起來。(例如說存成 coor )</p></li>
-<li><p>最後用 plot(x = coor[, 2], y = coor[, 1], plt = c(0, 10, -5, 5), cex = 0.1, asp = 1) 把它畫出來。</p></li>
-<li><p>這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)</p></li>
-<li><p><a href="https://dl.dropboxusercontent.com/u/5487490/RBasic/Barnsley_Fern_template.R">Template</a></p></li>
-</ul>
+    <p>One simple way to open the template if you&#39;re using our package.</p>
+
+<pre><code class="r">path &lt;- DSC2014Tutorial::Basic_file(&quot;barnsley_fern_template.R&quot;)
+utils::browseURL(path)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-151" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Barnsley Fern Fractal: Template</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>One simple way to open the template if you&#39;re using our package.</p>
+
+<pre><code class="r">path &lt;- DSC2014Tutorial::Basic_file(&quot;barnsley_fern_template.R&quot;)
+utils::browseURL(path)
+</code></pre>
 
 <p><font size='6'></p>
 
@@ -3239,7 +3247,23 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-151" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-152" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Barnsley Fern Fractal: The Answer</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Reference answer.</p>
+
+<pre><code class="r">path &lt;- DSC2014Tutorial::Basic_file(&quot;barnsley_fern_answer.R&quot;)
+utils::browseURL(path)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-153" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Function</h2>
@@ -3250,7 +3274,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-152" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-154" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Define Your Own Function</h2>
@@ -3276,7 +3300,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-153" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-155" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Define Your Own Operation</h2>
@@ -3295,7 +3319,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-154" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-156" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Define Your Own Operation</h2>
@@ -3314,7 +3338,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-155" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-157" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Default Values and Scoping Rule</h2>
@@ -3341,7 +3365,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-156" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-158" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Default Values and Scoping Rule</h2>
@@ -3370,7 +3394,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-157" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-159" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project II - Battleship</h2>
@@ -3381,7 +3405,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-158" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-160" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project II - Battleship</h2>
@@ -3393,7 +3417,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-159" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-161" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Battleship: Tips</h2>
@@ -3423,21 +3447,23 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-160" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-162" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Battleship: Tips</h2>
+    <h2>Battleship: Template</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li><a href="https://dl.dropboxusercontent.com/u/5487490/RBasic/battleship_template.R">Template</a></li>
-</ul>
+    <p>One simple way to open the template file if you are using our package.</p>
+
+<pre><code class="r">path &lt;- DSC2014Tutorial::Basic_file(&quot;battleship_template.R&quot;)
+utils::browseURL(path)
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-161" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-163" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Some Function You Might Need</h2>
@@ -3457,7 +3483,7 @@ A %*% A_inv_b
 <pre><code class="r">sample.int(5, 1)   # 從 1~5 中隨機抽取 1 個數字。
 </code></pre>
 
-<pre><code>## [1] 4
+<pre><code>## [1] 2
 </code></pre>
 
 <ul>
@@ -3477,76 +3503,14 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-162" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Battleship 成品範例 (1/3)</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code>battleship &lt;- function(num_guess = 5, cheat = F){
-        ship_x &lt;- sample.int(5, size = 1)
-        ship_y &lt;- sample.int(5, size = 1)
-        if (cheat){
-                print(ship_x)
-                print(ship_y)
-        }
-        map =list(c(&#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;),
-                  c(&#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;),
-                  c(&#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;),
-                  c(&#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;),
-                  c(&#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;))
-        for (r in map){
-                print(r)
-        }
-        trial &lt;- 0
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-163" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Battleship 成品範例 (2/3)</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code>    while (trial &lt; num_guess){
-                x &lt;- as.numeric(readline(&#39;Guess the x:&#39;))
-                y &lt;- as.numeric(readline(&#39;Guess the y:&#39;))
-                if (x &lt;= 5 &amp;&amp; y &lt;= 5 &amp;&amp; x &gt; 0 &amp;&amp; y &gt; 0){ 
-                        map[[y]][x] &lt;- &#39;X&#39;
-                        for (r in map){
-                                print(r)
-                        }
-                        if (x == ship_x &amp; y == ship_y){
-                                cat(&#39;Oh NO~~~You shrink my boat!!&#39;)
-                                break
-                        } else{
-                                cat(&#39;You miss.&#39;)
-                                trial &lt;- trial + 1
-                        }
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
 <slide class="" id="slide-164" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Battleship 成品範例 (3/3)</h2>
+    <h2>Battleship 成品範例</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code>                        if (trial &gt;= num_guess){
-                                cat(&#39;You loss.&#39;)
-                        }
-                } else {
-                        cat(&#39;Invalid x or y coordinate.&#39;)
-                }
-        }
-
-}
+    <pre><code class="r">path &lt;- DSC2014Tutorial::Basic_file(&quot;battleship_answer.R&quot;)
+utils::browseURL(path)
 </code></pre>
 
   </article>
@@ -4507,91 +4471,91 @@ A %*% A_inv_b
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=150 title='Barnsley Fern Fractal: Tips'>
+        data-slide=150 title='Barnsley Fern Fractal: Template'>
          150
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=151 title='Function'>
+        data-slide=151 title='Barnsley Fern Fractal: Template'>
          151
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=152 title='Define Your Own Function'>
+        data-slide=152 title='Barnsley Fern Fractal: The Answer'>
          152
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=153 title='Define Your Own Operation'>
+        data-slide=153 title='Function'>
          153
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=154 title='Define Your Own Operation'>
+        data-slide=154 title='Define Your Own Function'>
          154
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=155 title='Default Values and Scoping Rule'>
+        data-slide=155 title='Define Your Own Operation'>
          155
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=156 title='Default Values and Scoping Rule'>
+        data-slide=156 title='Define Your Own Operation'>
          156
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=157 title='Mini Project II - Battleship'>
+        data-slide=157 title='Default Values and Scoping Rule'>
          157
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=158 title='Mini Project II - Battleship'>
+        data-slide=158 title='Default Values and Scoping Rule'>
          158
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=159 title='Battleship: Tips'>
+        data-slide=159 title='Mini Project II - Battleship'>
          159
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=160 title='Battleship: Tips'>
+        data-slide=160 title='Mini Project II - Battleship'>
          160
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=161 title='Some Function You Might Need'>
+        data-slide=161 title='Battleship: Tips'>
          161
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=162 title='Battleship 成品範例 (1/3)'>
+        data-slide=162 title='Battleship: Template'>
          162
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=163 title='Battleship 成品範例 (2/3)'>
+        data-slide=163 title='Some Function You Might Need'>
          163
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=164 title='Battleship 成品範例 (3/3)'>
+        data-slide=164 title='Battleship 成品範例'>
          164
       </a>
     </li>
