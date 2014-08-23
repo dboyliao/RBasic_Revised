@@ -2010,6 +2010,11 @@ final_result
                 system("say 'Nann Moll Ah Mi Tow Fo'")
                 system("say 'Ah Men'")
         }
+        # This is for Ubuntu.
+        for (i in 1:5){
+                system("espeak 'Nann Moll Ah Mi Tow Fo'")
+                system("espeak 'Ah Men'")
+        }
 
 --- .segue bg:green
 
