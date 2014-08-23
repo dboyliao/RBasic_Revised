@@ -2232,11 +2232,11 @@ DF &lt;- read.table(DSC2014Tutorial::ETL_file(&#39;cl_info_other.csv&#39;), sep 
   </hgroup>
   <article data-timings="">
     <pre><code class="r"># read.table 小技巧。
-tmp &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
-                 stringsAsFactors = F, header = T, nrows = 1000)
+tmp &lt;- read.table(DSC2014Tutorial::ETL_file(&#39;cl_info_other.csv&#39;), sep = &#39;,&#39;,
+                 stringsAsFactors = F, header = T, nrows = 100)
 colClasses &lt;- sapply(tmp, class)
-DF &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
-                 stringsAsFactors = F, header = T, colClasses = colClasses)
+DF &lt;- read.table(DSC2014Tutorial::ETL_file(&#39;cl_info_other.csv&#39;), sep = &#39;,&#39;,
+                 header = T, colClasses = colClasses)
 </code></pre>
 
 <p><img src="assets/img/read_no_colClasses.png", height=80%, width=80%/></p>

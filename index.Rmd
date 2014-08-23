@@ -1105,11 +1105,11 @@ DF <- read.table(DSC2014Tutorial::ETL_file('cl_info_other.csv'), sep = ',',
 
 ```{r, result = 'hide'}
 # read.table 小技巧。
-tmp <- read.table('cl_info_other.csv', sep = ',',
-                 stringsAsFactors = F, header = T, nrows = 1000)
+tmp <- read.table(DSC2014Tutorial::ETL_file('cl_info_other.csv'), sep = ',',
+                 stringsAsFactors = F, header = T, nrows = 100)
 colClasses <- sapply(tmp, class)
-DF <- read.table('cl_info_other.csv', sep = ',',
-                 stringsAsFactors = F, header = T, colClasses = colClasses)
+DF <- read.table(DSC2014Tutorial::ETL_file('cl_info_other.csv'), sep = ',',
+                 header = T, colClasses = colClasses)
 ```
 
 <img src="assets/img/read_no_colClasses.png", height=80%, width=80%/>
