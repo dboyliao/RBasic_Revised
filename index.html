@@ -503,39 +503,51 @@ a == NA     # 要用is.na(a)才會傳回TRUE或FALSE。(另外還有 )
     <h2>Fun Time</h2>
   </hgroup>
   <article data-timings="">
-    <h3>於 Console 中依續執行下列程式碼。</h3>
+    
+<div class="quiz quiz-single well ">
+  <p><code>猜猜看答案會是多少? (sum 是 R 中的內建函式，用以求和。)</code></p>
+
+<pre><code class="r">my_vec &lt;- c(1, 2, 5, 90, 37)
+ind &lt;- my_vec &gt;= 5
+sum(ind)
+</code></pre>
 
 <ol>
-<li>my_vec &lt;- c(1, 2, 5, 90, 37)</li>
-<li>ind &lt;- my_vec &gt;= 5</li>
-<li>sum(ind)</li>
+<li>135</li>
+<li><em>3</em></li>
+<li>132</li>
+<li>None of above.</li>
 </ol>
 
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-hint">
+  <pre><code class="r">(sum(c(T, F, T)))
+</code></pre>
+
+<pre><code>## [1] 2
+</code></pre>
+
+</div>
+<div class="quiz-explanation">
+  <pre><code class="r">my_vec &lt;- c(1, 2, 5, 90, 37)
+ind &lt;- my_vec &gt;= 5
+sum(ind)
+</code></pre>
+
+<pre><code>## [1] 3
+</code></pre>
+
+</div>
+</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-22" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Fun Time</h2>
-  </hgroup>
-  <article data-timings="">
-    <h3>於 Console 中依續執行下列程式碼。</h3>
-
-<ol>
-<li>my_vec &lt;- c(1, 2, 5, 90, 37)</li>
-<li>ind &lt;- my_vec &gt;= 5</li>
-<li>sum(ind) </li>
-</ol>
-
-<p><code>猜猜看答案會是多少? (sum 是 R 中的內建函式，用以求和。)</code> <br></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="segue" id="slide-23" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-22" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Subsetting Phase I: Index</h2>
@@ -546,7 +558,7 @@ a == NA     # 要用is.na(a)才會傳回TRUE或FALSE。(另外還有 )
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-24" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-23" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Vector and List</h2>
@@ -557,7 +569,7 @@ a == NA     # 要用is.na(a)才會傳回TRUE或FALSE。(另外還有 )
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-25" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-24" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Vector</h2>
@@ -588,7 +600,7 @@ vec2 &lt;- c(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-26" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-25" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2><strong>Funtime</strong></h2>
@@ -609,7 +621,7 @@ mix_vec2 &lt;- c(2, T)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-27" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-26" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2><strong>Funtime</strong></h2>
@@ -632,7 +644,7 @@ mix_vec2 &lt;- c(2, T)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-28" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-27" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Useful Methods (Vector)</h2>
@@ -657,7 +669,7 @@ mix_vec2 &lt;- c(2, T)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-29" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-28" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Examples</h2>
@@ -683,7 +695,7 @@ names(Bob)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-30" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-29" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Examples</h2>
@@ -704,7 +716,7 @@ z
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-31" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-30" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise</h2>
@@ -716,7 +728,7 @@ z
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-32" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-31" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise</h2>
@@ -730,7 +742,7 @@ z
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-33" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-32" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise</h2>
@@ -749,7 +761,7 @@ z
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-34" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-33" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>List</h2>
@@ -760,7 +772,7 @@ z
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-35" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-34" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>List</h2>
@@ -786,7 +798,7 @@ z
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-36" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-35" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>List: Examples</h2>
@@ -807,7 +819,7 @@ Bob &lt;- list(age=27, weight = 80,
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-37" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-36" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Vector Subsetting - Phase I</h2>
@@ -818,7 +830,7 @@ Bob &lt;- list(age=27, weight = 80,
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-38" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-37" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Subsetting by Index</h2>
@@ -845,7 +857,7 @@ vec[length(vec)]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-39" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-38" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Subsetting by Name</h2>
@@ -867,7 +879,7 @@ Dboy[&quot;age&quot;]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-40" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-39" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>List Subsetting - Phase I</h2>
@@ -878,7 +890,7 @@ Dboy[&quot;age&quot;]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-41" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-40" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Subsetting by Index</h2>
@@ -911,7 +923,7 @@ Bob[[1]]; class(Bob[[1]])
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-42" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-41" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Subsetting by Name</h2>
@@ -938,7 +950,7 @@ Bob[[&quot;age&quot;]]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-43" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-42" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix Subsetting - Phase I</h2>
@@ -949,7 +961,7 @@ Bob[[&quot;age&quot;]]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-44" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-43" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix: First Look</h2>
@@ -966,7 +978,7 @@ A Matrix is something looks like this:
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-45" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-44" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Dimension</h2>
@@ -982,7 +994,7 @@ i for row indexing, j for column indexing.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-46" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-45" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Dimension</h2>
@@ -999,7 +1011,7 @@ i for row indexing, j for column indexing.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-47" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-46" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Dimension</h2>
@@ -1016,7 +1028,7 @@ j alone can specify one column.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-48" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-47" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Dimension</h2>
@@ -1033,7 +1045,7 @@ i together with j can specify one element in a matrix.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-49" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-48" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix in R</h2>
@@ -1054,7 +1066,7 @@ i together with j can specify one element in a matrix.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-50" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-49" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix: Subsetting by Index.</h2>
@@ -1078,7 +1090,7 @@ i together with j can specify one element in a matrix.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-51" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-50" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix: Subsetting by Index</h2>
@@ -1098,7 +1110,7 @@ i together with j can specify one element in a matrix.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-52" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-51" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix: Rename</h2>
@@ -1115,7 +1127,7 @@ i together with j can specify one element in a matrix.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-53" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-52" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix: Subsetting by Name</h2>
@@ -1135,7 +1147,7 @@ i together with j can specify one element in a matrix.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-54" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-53" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Fun Time</h2>
@@ -1170,7 +1182,7 @@ Mat[3, 3] &lt;- &quot;Ha Ha!&quot;
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-55" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-54" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Data Frame Subsetting - Phase I</h2>
@@ -1181,7 +1193,7 @@ Mat[3, 3] &lt;- &quot;Ha Ha!&quot;
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-56" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-55" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Data Frame: First Look</h2>
@@ -1203,7 +1215,7 @@ We take iris data set for example
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-57" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-56" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Dimension</h2>
@@ -1224,7 +1236,7 @@ Similer to the matrix, a data frame also has two dimensions.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-58" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-57" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Data Frame: Subsetting by Index</h2>
@@ -1245,7 +1257,7 @@ Similer to the matrix, a data frame also has two dimensions.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-59" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-58" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Data Frame: Subsetting by Index</h2>
@@ -1265,7 +1277,7 @@ Similer to the matrix, a data frame also has two dimensions.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-60" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-59" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Data Frame: Subsetting by Column Name</h2>
@@ -1285,7 +1297,7 @@ Similer to the matrix, a data frame also has two dimensions.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-61" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-60" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Data Frame: Rename</h2>
@@ -1314,7 +1326,7 @@ iris
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-62" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-61" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>One Simple Way to Construct a Data Frame.</h2>
@@ -1340,7 +1352,7 @@ str(my_data)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-63" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-62" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Fun Time</h2>
@@ -1356,7 +1368,7 @@ str(my_data)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-64" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-63" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Subsetting Phase II: Indices</h2>
@@ -1367,7 +1379,7 @@ str(my_data)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-65" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-64" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Vector and List</h2>
@@ -1378,7 +1390,7 @@ str(my_data)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-66" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-65" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Vector: Reference by Indices</h2>
@@ -1404,7 +1416,7 @@ str(my_data)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-67" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-66" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Vector: Multi Indexing with Expression</h2>
@@ -1426,7 +1438,7 @@ speed[speed &gt; 5]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-68" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-67" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Vector: Multi Indexing with which()</h2>
@@ -1454,7 +1466,7 @@ speed[speed &gt; 5]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-69" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-68" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Vector: Multi Indexing with which()</h2>
@@ -1481,7 +1493,7 @@ Dboy[ind]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-70" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-69" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>List: Subsetting by Indices</h2>
@@ -1509,7 +1521,7 @@ Dboy[ind]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-71" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-70" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>List: Subsetting with which()</h2>
@@ -1532,7 +1544,7 @@ Dboy[ind]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-72" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-71" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>List: Subsetting with which()</h2>
@@ -1704,7 +1716,7 @@ Dboy[ind]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-73" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-72" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix Subsetting - Phase II</h2>
@@ -1715,7 +1727,7 @@ Dboy[ind]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-74" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-73" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix: Subsetting with Indices</h2>
@@ -1737,7 +1749,7 @@ Dboy[ind]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-75" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-74" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix: Subsetting with Indices</h2>
@@ -1755,7 +1767,7 @@ Dboy[ind]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-76" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-75" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Data Frame: Subsetting with Indices</h2>
@@ -1778,7 +1790,7 @@ iris[c(2, 5), seq(from=1, to = 5, by = 2)]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-77" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-76" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Data Frame: Subsetting with Indices</h2>
@@ -1796,7 +1808,7 @@ iris[c(2, 5), seq(from=1, to = 5, by = 2)]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-78" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-77" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Merging: rbind and cbind</h2>
@@ -1807,7 +1819,7 @@ iris[c(2, 5), seq(from=1, to = 5, by = 2)]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-79" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-78" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>rbind</h2>
@@ -1818,7 +1830,7 @@ iris[c(2, 5), seq(from=1, to = 5, by = 2)]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-80" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-79" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Merging: rbind</h2>
@@ -1836,7 +1848,7 @@ iris[c(2, 5), seq(from=1, to = 5, by = 2)]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-81" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-80" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Merging: rbind</h2>
@@ -1851,7 +1863,7 @@ iris[c(2, 5), seq(from=1, to = 5, by = 2)]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-82" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-81" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Merging: rbind</h2>
@@ -1877,7 +1889,7 @@ iris[1:3, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-83" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-82" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Merging: rbind</h2>
@@ -1903,7 +1915,7 @@ iris[1:3, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-84" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-83" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Merging: rbind</h2>
@@ -1932,7 +1944,7 @@ iris[1:3, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-85" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-84" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>cbind</h2>
@@ -1943,7 +1955,7 @@ iris[1:3, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-86" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-85" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Merging: cbind</h2>
@@ -1963,7 +1975,7 @@ iris[1:3, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-87" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-86" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Merging: cbind</h2>
@@ -1978,7 +1990,7 @@ iris[1:3, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-88" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-87" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Merging: cbind</h2>
@@ -2005,7 +2017,7 @@ iris[1:3, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-89" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-88" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Merging: cbind</h2>
@@ -2032,7 +2044,7 @@ iris[1:3, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-90" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-89" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Merging: cbind</h2>
@@ -2059,7 +2071,7 @@ iris[1:3, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-91" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-90" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Fun Time</h2>
@@ -2076,7 +2088,7 @@ iris[1:3, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-92" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-91" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>sort() and order()</h2>
@@ -2087,7 +2099,7 @@ iris[1:3, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-93" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-92" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>The Difference Between sort() and order()</h2>
@@ -2111,7 +2123,7 @@ iris[1:3, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-94" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-93" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>The Difference Between sort() and order()</h2>
@@ -2125,7 +2137,7 @@ iris[1:3, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-95" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-94" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Let the Code Reveals Itself</h2>
@@ -2148,7 +2160,7 @@ iris[1:3, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-96" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-95" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Ordering by Multiple Arguments</h2>
@@ -2179,7 +2191,7 @@ iris[1:3, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-97" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-96" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Play With It And You Will Master It!</h2>
@@ -2193,7 +2205,7 @@ iris[1:3, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-98" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-97" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Play With It And You Will Master It!</h2>
@@ -2207,7 +2219,7 @@ iris[1:3, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-99" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-98" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Play With It And You Will Master It!</h2>
@@ -2225,7 +2237,7 @@ DF &lt;- read.table(DSC2014Tutorial::ETL_file(&#39;cl_info_other.csv&#39;), sep 
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-100" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-99" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Play With It And You Will Master It!</h2>
@@ -2247,7 +2259,7 @@ DF &lt;- read.table(DSC2014Tutorial::ETL_file(&#39;cl_info_other.csv&#39;), sep 
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-101" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-100" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercises:</h2>
@@ -2265,7 +2277,7 @@ DF &lt;- read.table(DSC2014Tutorial::ETL_file(&#39;cl_info_other.csv&#39;), sep 
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-102" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-101" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercises:</h2>
@@ -2289,7 +2301,7 @@ DF &lt;- read.table(DSC2014Tutorial::ETL_file(&#39;cl_info_other.csv&#39;), sep 
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-103" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-102" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercises:</h2>
@@ -2313,13 +2325,38 @@ DF &lt;- read.table(DSC2014Tutorial::ETL_file(&#39;cl_info_other.csv&#39;), sep 
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-104" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-103" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Factor</h2>
   </hgroup>
   <article data-timings="">
     
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-104" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Factor: First Look</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">(Petal.W &lt;- as.factor(iris[, &quot;Petal.Width&quot;]))
+</code></pre>
+
+<pre><code>##   [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2 0.1 0.1 0.2 0.4 0.4
+##  [18] 0.3 0.3 0.3 0.2 0.4 0.2 0.5 0.2 0.2 0.4 0.2 0.2 0.2 0.2 0.4 0.1 0.2
+##  [35] 0.2 0.2 0.2 0.1 0.2 0.2 0.3 0.3 0.2 0.6 0.4 0.3 0.2 0.2 0.2 0.2 1.4
+##  [52] 1.5 1.5 1.3 1.5 1.3 1.6 1   1.3 1.4 1   1.5 1   1.4 1.3 1.4 1.5 1  
+##  [69] 1.5 1.1 1.8 1.3 1.5 1.2 1.3 1.4 1.4 1.7 1.5 1   1.1 1   1.2 1.6 1.5
+##  [86] 1.6 1.5 1.3 1.3 1.3 1.2 1.4 1.2 1   1.3 1.2 1.3 1.3 1.1 1.3 2.5 1.9
+## [103] 2.1 1.8 2.2 2.1 1.7 1.8 1.8 2.5 2   1.9 2.1 2   2.4 2.3 1.8 2.2 2.3
+## [120] 1.5 2.3 2   2   1.8 2.1 1.8 1.8 1.8 2.1 1.6 1.9 2   2.2 1.5 1.4 2.3
+## [137] 2.4 1.8 1.8 2.1 2.4 2.3 1.9 2.3 2.5 2.3 1.9 2   2.3 1.8
+## 22 Levels: 0.1 0.2 0.3 0.4 0.5 0.6 1 1.1 1.2 1.3 1.4 1.5 1.6 1.7 ... 2.5
+</code></pre>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -2333,9 +2370,19 @@ DF &lt;- read.table(DSC2014Tutorial::ETL_file(&#39;cl_info_other.csv&#39;), sep 
     <pre><code class="r">(Petal.W &lt;- as.factor(iris[, &quot;Petal.Width&quot;]))
 </code></pre>
 
-<pre><code>##  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2
-## Levels: 0.1 0.2 0.3 0.4
+<pre><code>##   [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2 0.1 0.1 0.2 0.4 0.4
+##  [18] 0.3 0.3 0.3 0.2 0.4 0.2 0.5 0.2 0.2 0.4 0.2 0.2 0.2 0.2 0.4 0.1 0.2
+##  [35] 0.2 0.2 0.2 0.1 0.2 0.2 0.3 0.3 0.2 0.6 0.4 0.3 0.2 0.2 0.2 0.2 1.4
+##  [52] 1.5 1.5 1.3 1.5 1.3 1.6 1   1.3 1.4 1   1.5 1   1.4 1.3 1.4 1.5 1  
+##  [69] 1.5 1.1 1.8 1.3 1.5 1.2 1.3 1.4 1.4 1.7 1.5 1   1.1 1   1.2 1.6 1.5
+##  [86] 1.6 1.5 1.3 1.3 1.3 1.2 1.4 1.2 1   1.3 1.2 1.3 1.3 1.1 1.3 2.5 1.9
+## [103] 2.1 1.8 2.2 2.1 1.7 1.8 1.8 2.5 2   1.9 2.1 2   2.4 2.3 1.8 2.2 2.3
+## [120] 1.5 2.3 2   2   1.8 2.1 1.8 1.8 1.8 2.1 1.6 1.9 2   2.2 1.5 1.4 2.3
+## [137] 2.4 1.8 1.8 2.1 2.4 2.3 1.9 2.3 2.5 2.3 1.9 2   2.3 1.8
+## 22 Levels: 0.1 0.2 0.3 0.4 0.5 0.6 1 1.1 1.2 1.3 1.4 1.5 1.6 1.7 ... 2.5
 </code></pre>
+
+<p><code>有啥特別的? 不就多個 levels 嗎? 跟向量不是差不多?</code></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -2350,27 +2397,16 @@ DF &lt;- read.table(DSC2014Tutorial::ETL_file(&#39;cl_info_other.csv&#39;), sep 
     <pre><code class="r">(Petal.W &lt;- as.factor(iris[, &quot;Petal.Width&quot;]))
 </code></pre>
 
-<pre><code>##  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2
-## Levels: 0.1 0.2 0.3 0.4
-</code></pre>
-
-<p><code>有啥特別的? 不就多個 levels 嗎? 跟向量不是差不多?</code></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-107" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Factor: First Look</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">(Petal.W &lt;- as.factor(iris[, &quot;Petal.Width&quot;]))
-</code></pre>
-
-<pre><code>##  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2
-## Levels: 0.1 0.2 0.3 0.4
+<pre><code>##   [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2 0.1 0.1 0.2 0.4 0.4
+##  [18] 0.3 0.3 0.3 0.2 0.4 0.2 0.5 0.2 0.2 0.4 0.2 0.2 0.2 0.2 0.4 0.1 0.2
+##  [35] 0.2 0.2 0.2 0.1 0.2 0.2 0.3 0.3 0.2 0.6 0.4 0.3 0.2 0.2 0.2 0.2 1.4
+##  [52] 1.5 1.5 1.3 1.5 1.3 1.6 1   1.3 1.4 1   1.5 1   1.4 1.3 1.4 1.5 1  
+##  [69] 1.5 1.1 1.8 1.3 1.5 1.2 1.3 1.4 1.4 1.7 1.5 1   1.1 1   1.2 1.6 1.5
+##  [86] 1.6 1.5 1.3 1.3 1.3 1.2 1.4 1.2 1   1.3 1.2 1.3 1.3 1.1 1.3 2.5 1.9
+## [103] 2.1 1.8 2.2 2.1 1.7 1.8 1.8 2.5 2   1.9 2.1 2   2.4 2.3 1.8 2.2 2.3
+## [120] 1.5 2.3 2   2   1.8 2.1 1.8 1.8 1.8 2.1 1.6 1.9 2   2.2 1.5 1.4 2.3
+## [137] 2.4 1.8 1.8 2.1 2.4 2.3 1.9 2.3 2.5 2.3 1.9 2   2.3 1.8
+## 22 Levels: 0.1 0.2 0.3 0.4 0.5 0.6 1 1.1 1.2 1.3 1.4 1.5 1.6 1.7 ... 2.5
 </code></pre>
 
 <p><code>同款就不同師父啊(台)</code></p>
@@ -2379,7 +2415,7 @@ DF &lt;- read.table(DSC2014Tutorial::ETL_file(&#39;cl_info_other.csv&#39;), sep 
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-108" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-107" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Try This Code</h2>
@@ -2421,7 +2457,7 @@ Which is the correct outcome? <br>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-109" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-108" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>The Answer</h2>
@@ -2433,18 +2469,32 @@ Which is the correct outcome? <br>
 as.numeric(Petal.W)
 </code></pre>
 
-<pre><code>##  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2
-## Levels: 0.1 0.2 0.3 0.4
+<pre><code>##   [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2 0.1 0.1 0.2 0.4 0.4
+##  [18] 0.3 0.3 0.3 0.2 0.4 0.2 0.5 0.2 0.2 0.4 0.2 0.2 0.2 0.2 0.4 0.1 0.2
+##  [35] 0.2 0.2 0.2 0.1 0.2 0.2 0.3 0.3 0.2 0.6 0.4 0.3 0.2 0.2 0.2 0.2 1.4
+##  [52] 1.5 1.5 1.3 1.5 1.3 1.6 1   1.3 1.4 1   1.5 1   1.4 1.3 1.4 1.5 1  
+##  [69] 1.5 1.1 1.8 1.3 1.5 1.2 1.3 1.4 1.4 1.7 1.5 1   1.1 1   1.2 1.6 1.5
+##  [86] 1.6 1.5 1.3 1.3 1.3 1.2 1.4 1.2 1   1.3 1.2 1.3 1.3 1.1 1.3 2.5 1.9
+## [103] 2.1 1.8 2.2 2.1 1.7 1.8 1.8 2.5 2   1.9 2.1 2   2.4 2.3 1.8 2.2 2.3
+## [120] 1.5 2.3 2   2   1.8 2.1 1.8 1.8 1.8 2.1 1.6 1.9 2   2.2 1.5 1.4 2.3
+## [137] 2.4 1.8 1.8 2.1 2.4 2.3 1.9 2.3 2.5 2.3 1.9 2   2.3 1.8
+## 22 Levels: 0.1 0.2 0.3 0.4 0.5 0.6 1 1.1 1.2 1.3 1.4 1.5 1.6 1.7 ... 2.5
 </code></pre>
 
-<pre><code>##  [1] 2 2 2 2 2 4 3 2 2 1 2 2
+<pre><code>##   [1]  2  2  2  2  2  4  3  2  2  1  2  2  1  1  2  4  4  3  3  3  2  4  2
+##  [24]  5  2  2  4  2  2  2  2  4  1  2  2  2  2  1  2  2  3  3  2  6  4  3
+##  [47]  2  2  2  2 11 12 12 10 12 10 13  7 10 11  7 12  7 11 10 11 12  7 12
+##  [70]  8 15 10 12  9 10 11 11 14 12  7  8  7  9 13 12 13 12 10 10 10  9 11
+##  [93]  9  7 10  9 10 10  8 10 22 16 18 15 19 18 14 15 15 22 17 16 18 17 21
+## [116] 20 15 19 20 12 20 17 17 15 18 15 15 15 18 13 16 17 19 12 11 20 21 15
+## [139] 15 18 21 20 16 20 22 20 16 17 20 15
 </code></pre>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-110" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-109" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2><br></h2>
@@ -2461,7 +2511,7 @@ as.numeric(Petal.W)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-111" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-110" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>A Closer Look</h2>
@@ -2479,7 +2529,7 @@ as.numeric(Petal.W)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-112" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-111" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>A Closer Look</h2>
@@ -2497,7 +2547,7 @@ as.numeric(Petal.W)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-113" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-112" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Build-in Function: factor()</h2>
@@ -2511,7 +2561,7 @@ as.numeric(Petal.W)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-114" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-113" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Build-in Function: factor()</h2>
@@ -2525,7 +2575,7 @@ as.numeric(Petal.W)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-115" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-114" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Build-in Function: factor()</h2>
@@ -2545,7 +2595,7 @@ test_factor &lt;- factor(test_factor)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-116" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-115" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Build-in Function: factor()</h2>
@@ -2568,7 +2618,7 @@ test_factor &lt;- factor(test_factor)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-117" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-116" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Build-in Function: factor()</h2>
@@ -2592,7 +2642,7 @@ test_factor
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-118" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-117" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Pop Quiz</h2>
@@ -2628,7 +2678,7 @@ my_vector &lt;- Levels[as.numeric(my_factor)]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-119" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-118" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Loops</h2>
@@ -2639,7 +2689,7 @@ my_vector &lt;- Levels[as.numeric(my_factor)]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-120" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-119" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>For Loop</h2>
@@ -2650,7 +2700,7 @@ my_vector &lt;- Levels[as.numeric(my_factor)]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-121" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-120" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>For Loop</h2>
@@ -2680,7 +2730,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-122" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-121" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>剛剛的例子有點兒無聊....</h2>
@@ -2698,7 +2748,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-123" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-122" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>If Loop</h2>
@@ -2709,7 +2759,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-124" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-123" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>If Loop</h2>
@@ -2734,7 +2784,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-125" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-124" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
@@ -2749,7 +2799,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-126" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-125" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
@@ -2766,7 +2816,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-127" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-126" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
@@ -2783,7 +2833,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-128" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-127" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
@@ -2798,7 +2848,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-129" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-128" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
@@ -2814,7 +2864,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-130" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-129" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
@@ -2829,7 +2879,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-131" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-130" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>While Loop</h2>
@@ -2840,7 +2890,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-132" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-131" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>While Loop</h2>
@@ -2870,7 +2920,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-133" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-132" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>While Loop (Cont.)</h2>
@@ -2882,7 +2932,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-134" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-133" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>While Loop (Cont.)</h2>
@@ -2901,7 +2951,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-135" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-134" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Useful Functions</h2>
@@ -2920,7 +2970,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-136" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-135" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Basic Operation - Phase II</h2>
@@ -2931,7 +2981,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-137" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-136" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Arithmetic Operations</h2>
@@ -2942,7 +2992,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-138" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-137" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>+, -, *, /, %/%, %%</h2>
@@ -2970,7 +3020,7 @@ All these operations are vectorized. (element-by-element operation)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-139" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-138" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix Operations: Multiplication and Transpose</h2>
@@ -2995,7 +3045,7 @@ my_mat2 &lt;- matrix(runif(6), 3, 2)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-140" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-139" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix Operations: Solving Linear System</h2>
@@ -3025,7 +3075,7 @@ x^*= A^{-1} b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-141" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-140" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix Operations: Solving Linear System</h2>
@@ -3053,7 +3103,7 @@ x^*= A^{-1} b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-142" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-141" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix Operations: Solving Linear System</h2>
@@ -3074,7 +3124,7 @@ x^*= A^{-1} b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-143" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-142" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix Operations: Solving Linear System</h2>
@@ -3097,7 +3147,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-144" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-143" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix Operations: Solving Linear System</h2>
@@ -3124,7 +3174,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-145" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-144" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project I: Barnsley Fern Fractal</h2>
@@ -3135,7 +3185,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-146" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-145" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project I: Barnsley Fern Fractal</h2>
@@ -3158,7 +3208,7 @@ A %*% A_inv_b
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-147" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-146" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Barnsley Fern Fractal</h2>
@@ -3171,6 +3221,22 @@ A %*% A_inv_b
 </ul>
 
 <p><img src="assets/img/Barnsley_Fern_40000.png" height="70%" width="70%" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-147" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Barnsley Fern Fractal: Tips</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>可以把迭代出來的點用一個 data.frame 存起來。(例如說存成 coor )</p></li>
+<li><p>最後用 plot(x = coor[, 2], y = coor[, 1], plt = c(0, 10, -5, 5), cex = 0.1, asp = 1) 把它畫出來。</p></li>
+<li><p>這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)</p></li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -3195,22 +3261,6 @@ A %*% A_inv_b
 <slide class="" id="slide-149" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Barnsley Fern Fractal: Tips</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
-<li><p>可以把迭代出來的點用一個 data.frame 存起來。(例如說存成 coor )</p></li>
-<li><p>最後用 plot(x = coor[, 2], y = coor[, 1], plt = c(0, 10, -5, 5), cex = 0.1, asp = 1) 把它畫出來。</p></li>
-<li><p>這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)</p></li>
-</ul>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-150" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
     <h2>Barnsley Fern Fractal: Template</h2>
   </hgroup>
   <article data-timings="">
@@ -3224,7 +3274,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-151" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-150" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Barnsley Fern Fractal: Template</h2>
@@ -3247,7 +3297,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-152" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-151" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Barnsley Fern Fractal: The Answer</h2>
@@ -3263,7 +3313,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-153" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-152" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Function</h2>
@@ -3274,7 +3324,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-154" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-153" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Define Your Own Function</h2>
@@ -3300,7 +3350,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-155" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-154" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Define Your Own Operation</h2>
@@ -3319,7 +3369,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-156" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-155" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Define Your Own Operation</h2>
@@ -3332,6 +3382,33 @@ utils::browseURL(path)
 </code></pre>
 
 <pre><code>## [1] 11
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-156" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Default Values and Scoping Rule</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">MyFunction &lt;- function(x, y, z=3, ...){
+        return(x + 2*y + 6*z + sum(...))
+}
+(MyFunction(1, 3, 5, 2, 9))
+(MyFunction(1, 3, 5, 2, z = 9))
+(MyFunction(1, 3, 5, y = 2, x = 9))
+</code></pre>
+
+<pre><code>## [1] 48
+</code></pre>
+
+<pre><code>## [1] 68
+</code></pre>
+
+<pre><code>## [1] 27
 </code></pre>
 
   </article>
@@ -3361,40 +3438,13 @@ utils::browseURL(path)
 <pre><code>## [1] 27
 </code></pre>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-158" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Default Values and Scoping Rule</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">MyFunction &lt;- function(x, y, z=3, ...){
-        return(x + 2*y + 6*z + sum(...))
-}
-(MyFunction(1, 3, 5, 2, 9))
-(MyFunction(1, 3, 5, 2, z = 9))
-(MyFunction(1, 3, 5, y = 2, x = 9))
-</code></pre>
-
-<pre><code>## [1] 48
-</code></pre>
-
-<pre><code>## [1] 68
-</code></pre>
-
-<pre><code>## [1] 27
-</code></pre>
-
 <p><code>It is time for Mini Project II!</code></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-159" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-158" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project II - Battleship</h2>
@@ -3405,7 +3455,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-160" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-159" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project II - Battleship</h2>
@@ -3417,7 +3467,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-161" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-160" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Battleship: Tips</h2>
@@ -3447,7 +3497,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-162" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-161" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Battleship: Template</h2>
@@ -3463,7 +3513,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-163" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-162" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Some Function You Might Need</h2>
@@ -3483,7 +3533,7 @@ utils::browseURL(path)
 <pre><code class="r">sample.int(5, 1)   # 從 1~5 中隨機抽取 1 個數字。
 </code></pre>
 
-<pre><code>## [1] 2
+<pre><code>## [1] 1
 </code></pre>
 
 <ul>
@@ -3503,7 +3553,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-164" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-163" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Battleship 成品範例</h2>
@@ -3517,7 +3567,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-165" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-164" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Help Yourself by Yourself</h2>
@@ -3528,7 +3578,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-166" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-165" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Why?</h2>
@@ -3544,7 +3594,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-167" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-166" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>But How?</h2>
@@ -3560,7 +3610,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-168" style="background:orange; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-167" style="background:orange; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Thanks for Your Attention!</h2>
@@ -3703,25 +3753,25 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='Fun Time'>
+        data-slide=22 title='Subsetting Phase I: Index'>
          22
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=23 title='Subsetting Phase I: Index'>
+        data-slide=23 title='Vector and List'>
          23
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=24 title='Vector and List'>
+        data-slide=24 title='Vector'>
          24
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=25 title='Vector'>
+        data-slide=25 title='<strong>Funtime</strong>'>
          25
       </a>
     </li>
@@ -3733,13 +3783,13 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=27 title='<strong>Funtime</strong>'>
+        data-slide=27 title='Useful Methods (Vector)'>
          27
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=28 title='Useful Methods (Vector)'>
+        data-slide=28 title='Examples'>
          28
       </a>
     </li>
@@ -3751,7 +3801,7 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=30 title='Examples'>
+        data-slide=30 title='Exercise'>
          30
       </a>
     </li>
@@ -3769,7 +3819,7 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=33 title='Exercise'>
+        data-slide=33 title='List'>
          33
       </a>
     </li>
@@ -3781,61 +3831,61 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=35 title='List'>
+        data-slide=35 title='List: Examples'>
          35
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=36 title='List: Examples'>
+        data-slide=36 title='Vector Subsetting - Phase I'>
          36
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=37 title='Vector Subsetting - Phase I'>
+        data-slide=37 title='Subsetting by Index'>
          37
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=38 title='Subsetting by Index'>
+        data-slide=38 title='Subsetting by Name'>
          38
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=39 title='Subsetting by Name'>
+        data-slide=39 title='List Subsetting - Phase I'>
          39
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=40 title='List Subsetting - Phase I'>
+        data-slide=40 title='Subsetting by Index'>
          40
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=41 title='Subsetting by Index'>
+        data-slide=41 title='Subsetting by Name'>
          41
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=42 title='Subsetting by Name'>
+        data-slide=42 title='Matrix Subsetting - Phase I'>
          42
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=43 title='Matrix Subsetting - Phase I'>
+        data-slide=43 title='Matrix: First Look'>
          43
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=44 title='Matrix: First Look'>
+        data-slide=44 title='Dimension'>
          44
       </a>
     </li>
@@ -3859,61 +3909,61 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=48 title='Dimension'>
+        data-slide=48 title='Matrix in R'>
          48
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=49 title='Matrix in R'>
+        data-slide=49 title='Matrix: Subsetting by Index.'>
          49
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=50 title='Matrix: Subsetting by Index.'>
+        data-slide=50 title='Matrix: Subsetting by Index'>
          50
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=51 title='Matrix: Subsetting by Index'>
+        data-slide=51 title='Matrix: Rename'>
          51
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=52 title='Matrix: Rename'>
+        data-slide=52 title='Matrix: Subsetting by Name'>
          52
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=53 title='Matrix: Subsetting by Name'>
+        data-slide=53 title='Fun Time'>
          53
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=54 title='Fun Time'>
+        data-slide=54 title='Data Frame Subsetting - Phase I'>
          54
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=55 title='Data Frame Subsetting - Phase I'>
+        data-slide=55 title='Data Frame: First Look'>
          55
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=56 title='Data Frame: First Look'>
+        data-slide=56 title='Dimension'>
          56
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=57 title='Dimension'>
+        data-slide=57 title='Data Frame: Subsetting by Index'>
          57
       </a>
     </li>
@@ -3925,55 +3975,55 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=59 title='Data Frame: Subsetting by Index'>
+        data-slide=59 title='Data Frame: Subsetting by Column Name'>
          59
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=60 title='Data Frame: Subsetting by Column Name'>
+        data-slide=60 title='Data Frame: Rename'>
          60
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=61 title='Data Frame: Rename'>
+        data-slide=61 title='One Simple Way to Construct a Data Frame.'>
          61
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=62 title='One Simple Way to Construct a Data Frame.'>
+        data-slide=62 title='Fun Time'>
          62
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=63 title='Fun Time'>
+        data-slide=63 title='Subsetting Phase II: Indices'>
          63
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=64 title='Subsetting Phase II: Indices'>
+        data-slide=64 title='Vector and List'>
          64
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=65 title='Vector and List'>
+        data-slide=65 title='Vector: Reference by Indices'>
          65
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=66 title='Vector: Reference by Indices'>
+        data-slide=66 title='Vector: Multi Indexing with Expression'>
          66
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=67 title='Vector: Multi Indexing with Expression'>
+        data-slide=67 title='Vector: Multi Indexing with which()'>
          67
       </a>
     </li>
@@ -3985,13 +4035,13 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=69 title='Vector: Multi Indexing with which()'>
+        data-slide=69 title='List: Subsetting by Indices'>
          69
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=70 title='List: Subsetting by Indices'>
+        data-slide=70 title='List: Subsetting with which()'>
          70
       </a>
     </li>
@@ -4003,13 +4053,13 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=72 title='List: Subsetting with which()'>
+        data-slide=72 title='Matrix Subsetting - Phase II'>
          72
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=73 title='Matrix Subsetting - Phase II'>
+        data-slide=73 title='Matrix: Subsetting with Indices'>
          73
       </a>
     </li>
@@ -4021,7 +4071,7 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=75 title='Matrix: Subsetting with Indices'>
+        data-slide=75 title='Data Frame: Subsetting with Indices'>
          75
       </a>
     </li>
@@ -4033,19 +4083,19 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=77 title='Data Frame: Subsetting with Indices'>
+        data-slide=77 title='Merging: rbind and cbind'>
          77
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=78 title='Merging: rbind and cbind'>
+        data-slide=78 title='rbind'>
          78
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=79 title='rbind'>
+        data-slide=79 title='Merging: rbind'>
          79
       </a>
     </li>
@@ -4075,13 +4125,13 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=84 title='Merging: rbind'>
+        data-slide=84 title='cbind'>
          84
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=85 title='cbind'>
+        data-slide=85 title='Merging: cbind'>
          85
       </a>
     </li>
@@ -4111,19 +4161,19 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=90 title='Merging: cbind'>
+        data-slide=90 title='Fun Time'>
          90
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=91 title='Fun Time'>
+        data-slide=91 title='sort() and order()'>
          91
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=92 title='sort() and order()'>
+        data-slide=92 title='The Difference Between sort() and order()'>
          92
       </a>
     </li>
@@ -4135,19 +4185,19 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=94 title='The Difference Between sort() and order()'>
+        data-slide=94 title='Let the Code Reveals Itself'>
          94
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=95 title='Let the Code Reveals Itself'>
+        data-slide=95 title='Ordering by Multiple Arguments'>
          95
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=96 title='Ordering by Multiple Arguments'>
+        data-slide=96 title='Play With It And You Will Master It!'>
          96
       </a>
     </li>
@@ -4171,7 +4221,7 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=100 title='Play With It And You Will Master It!'>
+        data-slide=100 title='Exercises:'>
          100
       </a>
     </li>
@@ -4189,13 +4239,13 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=103 title='Exercises:'>
+        data-slide=103 title='Factor'>
          103
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=104 title='Factor'>
+        data-slide=104 title='Factor: First Look'>
          104
       </a>
     </li>
@@ -4213,25 +4263,25 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=107 title='Factor: First Look'>
+        data-slide=107 title='Try This Code'>
          107
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=108 title='Try This Code'>
+        data-slide=108 title='The Answer'>
          108
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=109 title='The Answer'>
+        data-slide=109 title='<br>'>
          109
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=110 title='<br>'>
+        data-slide=110 title='A Closer Look'>
          110
       </a>
     </li>
@@ -4243,7 +4293,7 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=112 title='A Closer Look'>
+        data-slide=112 title='Build-in Function: factor()'>
          112
       </a>
     </li>
@@ -4273,19 +4323,19 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=117 title='Build-in Function: factor()'>
+        data-slide=117 title='Pop Quiz'>
          117
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=118 title='Pop Quiz'>
+        data-slide=118 title='Loops'>
          118
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=119 title='Loops'>
+        data-slide=119 title='For Loop'>
          119
       </a>
     </li>
@@ -4297,13 +4347,13 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=121 title='For Loop'>
+        data-slide=121 title='剛剛的例子有點兒無聊....'>
          121
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=122 title='剛剛的例子有點兒無聊....'>
+        data-slide=122 title='If Loop'>
          122
       </a>
     </li>
@@ -4315,7 +4365,7 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=124 title='If Loop'>
+        data-slide=124 title='Exercise: SVM Classifier'>
          124
       </a>
     </li>
@@ -4351,7 +4401,7 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=130 title='Exercise: SVM Classifier'>
+        data-slide=130 title='While Loop'>
          130
       </a>
     </li>
@@ -4363,7 +4413,7 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=132 title='While Loop'>
+        data-slide=132 title='While Loop (Cont.)'>
          132
       </a>
     </li>
@@ -4375,37 +4425,37 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=134 title='While Loop (Cont.)'>
+        data-slide=134 title='Useful Functions'>
          134
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=135 title='Useful Functions'>
+        data-slide=135 title='Basic Operation - Phase II'>
          135
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=136 title='Basic Operation - Phase II'>
+        data-slide=136 title='Arithmetic Operations'>
          136
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=137 title='Arithmetic Operations'>
+        data-slide=137 title='+, -, *, /, %/%, %%'>
          137
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=138 title='+, -, *, /, %/%, %%'>
+        data-slide=138 title='Matrix Operations: Multiplication and Transpose'>
          138
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=139 title='Matrix Operations: Multiplication and Transpose'>
+        data-slide=139 title='Matrix Operations: Solving Linear System'>
          139
       </a>
     </li>
@@ -4435,7 +4485,7 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=144 title='Matrix Operations: Solving Linear System'>
+        data-slide=144 title='Mini Project I: Barnsley Fern Fractal'>
          144
       </a>
     </li>
@@ -4447,13 +4497,13 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=146 title='Mini Project I: Barnsley Fern Fractal'>
+        data-slide=146 title='Barnsley Fern Fractal'>
          146
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=147 title='Barnsley Fern Fractal'>
+        data-slide=147 title='Barnsley Fern Fractal: Tips'>
          147
       </a>
     </li>
@@ -4465,7 +4515,7 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=149 title='Barnsley Fern Fractal: Tips'>
+        data-slide=149 title='Barnsley Fern Fractal: Template'>
          149
       </a>
     </li>
@@ -4477,25 +4527,25 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=151 title='Barnsley Fern Fractal: Template'>
+        data-slide=151 title='Barnsley Fern Fractal: The Answer'>
          151
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=152 title='Barnsley Fern Fractal: The Answer'>
+        data-slide=152 title='Function'>
          152
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=153 title='Function'>
+        data-slide=153 title='Define Your Own Function'>
          153
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=154 title='Define Your Own Function'>
+        data-slide=154 title='Define Your Own Operation'>
          154
       </a>
     </li>
@@ -4507,7 +4557,7 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=156 title='Define Your Own Operation'>
+        data-slide=156 title='Default Values and Scoping Rule'>
          156
       </a>
     </li>
@@ -4519,7 +4569,7 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=158 title='Default Values and Scoping Rule'>
+        data-slide=158 title='Mini Project II - Battleship'>
          158
       </a>
     </li>
@@ -4531,56 +4581,50 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=160 title='Mini Project II - Battleship'>
+        data-slide=160 title='Battleship: Tips'>
          160
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=161 title='Battleship: Tips'>
+        data-slide=161 title='Battleship: Template'>
          161
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=162 title='Battleship: Template'>
+        data-slide=162 title='Some Function You Might Need'>
          162
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=163 title='Some Function You Might Need'>
+        data-slide=163 title='Battleship 成品範例'>
          163
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=164 title='Battleship 成品範例'>
+        data-slide=164 title='Help Yourself by Yourself'>
          164
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=165 title='Help Yourself by Yourself'>
+        data-slide=165 title='Why?'>
          165
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=166 title='Why?'>
+        data-slide=166 title='But How?'>
          166
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=167 title='But How?'>
+        data-slide=167 title='Thanks for Your Attention!'>
          167
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=168 title='Thanks for Your Attention!'>
-         168
       </a>
     </li>
   </ul>

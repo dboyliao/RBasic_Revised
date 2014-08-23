@@ -241,28 +241,34 @@ a == NA     # 要用is.na(a)才會傳回TRUE或FALSE。(另外還有 )
 is.na(a)
 ```
 
-
----
-
-## Fun Time
-
-### 於 Console 中依續執行下列程式碼。
-
-1. my_vec <- c(1, 2, 5, 90, 37)
-2. ind <- my_vec >= 5
-3. sum(ind)
-
----
+--- &radio
 
 ## Fun Time
 
-### 於 Console 中依續執行下列程式碼。
+`猜猜看答案會是多少? (sum 是 R 中的內建函式，用以求和。)`
 
-1. my_vec <- c(1, 2, 5, 90, 37)
-2. ind <- my_vec >= 5
-3. sum(ind) 
+```{r, results='hide'}
+my_vec <- c(1, 2, 5, 90, 37)
+ind <- my_vec >= 5
+sum(ind)
+```
 
-`猜猜看答案會是多少? (sum 是 R 中的內建函式，用以求和。)` <br>
+1. 135
+2. _3_
+3. 132
+4. None of above.
+
+*** .hint
+```{r, results='hold'}
+(sum(c(T, F, T)))
+```
+
+*** .explanation
+```{r, results='hold'}
+my_vec <- c(1, 2, 5, 90, 37)
+ind <- my_vec >= 5
+sum(ind)
+```
 
 
 --- .segue bg:navy
@@ -607,6 +613,7 @@ M1[, 'F']
 <center>
 <img src="assets/img/R_Basic_Matrix_ex_name_ref.png" height="65%" width="65%"/>
 </center>
+
 
 --- &radio
 
