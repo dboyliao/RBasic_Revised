@@ -217,7 +217,7 @@ And you can claim that you can do sketch by a computer!
 
 ---
 
-## Examples (Cont.)
+## Examples
 
 
 ```r
@@ -447,7 +447,7 @@ names(Bob)
 
 ---
 
-## Examples
+## Examples 
 
 c() 也可以被用來結合兩個向量。
 
@@ -2084,7 +2084,7 @@ data("RBasic_ForLoop_Ex")
 
 
     while (T){
-            handsome <- readline('Are you handsome? ')
+            handsome <- readline('Are you handsome?[yes or no] ')
             if (handsome == 'yes'){
                     print('Really....!?')
             } else {
@@ -2110,6 +2110,7 @@ data("RBasic_ForLoop_Ex")
 
 > 1. 那如果要把上述程式改成電腦不斷詢問 "Do you like to code?" 呢?
 > 2. 至於要回答 'yes' or 'no' 才會停....
+> 3. 這個 while 迴圈有一點小問題，來想想要怎麼解決吧!
 
 
 --- .segue bg:navy
