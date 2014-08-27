@@ -35,7 +35,7 @@ model1 <- svm(y1 ~ ., data = data1, kernel = 'linear', scale = F)
 model2 <- svm(y2 ~ ., data = data2, kernel = 'linear', scale = F)
 model3 <- svm(y3 ~ ., data = data3, kernel = 'linear', scale = F)
 
-plot(model1, data1, Petal.Length ~ Petal.Width,
+plot(model0, data=iris, Petal.Length ~ Petal.Width,
      slice = list(Sepal.Width = 3, Sepal.Length = -4),color.palette = terrain.colors)
 
 plot(model2, data2, Petal.Width ~ Petal.Length,

@@ -169,6 +169,17 @@ And you can claim that you can do sketch by a computer!
   - Barnsley Fern Fractal
   - Battleship
 
+---
+
+## package: DSC2014Tutorial
+
+For the best tutorial experience:
+
+
+```r
+library("DSC2014Tutorial")
+```
+
 
 --- .segue bg:navy
 
@@ -2048,6 +2059,10 @@ One simple way to get the data if you're using our package.
 data("RBasic_ForLoop_Ex")
 ```
 
+```
+## Warning: data set 'RBasic_ForLoop_Ex' not found
+```
+
 
 ---
 
@@ -2343,6 +2358,14 @@ One simple way to open the template if you're using our package.
 
 ```r
 path <- DSC2014Tutorial::Basic_file("barnsley_fern_template.R")
+```
+
+```
+## Error: 'Basic_file' is not an exported object from
+## 'namespace:DSC2014Tutorial'
+```
+
+```r
 utils::browseURL(path)
 ```
 
@@ -2359,6 +2382,14 @@ Reference answer.
 
 ```r
 path <- DSC2014Tutorial::Basic_file("barnsley_fern_answer.R")
+```
+
+```
+## Error: 'Basic_file' is not an exported object from
+## 'namespace:DSC2014Tutorial'
+```
+
+```r
 utils::browseURL(path)
 ```
 
@@ -2514,6 +2545,14 @@ One simple way to open the template file if you are using our package.
 
 ```r
 path <- DSC2014Tutorial::Basic_file("battleship_template.R")
+```
+
+```
+## Error: 'Basic_file' is not an exported object from
+## 'namespace:DSC2014Tutorial'
+```
+
+```r
 utils::browseURL(path)
 ```
 
@@ -2559,6 +2598,14 @@ print('I love R!'); cat('I love R!')
 
 ```r
 path <- DSC2014Tutorial::Basic_file("battleship_answer.R")
+```
+
+```
+## Error: 'Basic_file' is not an exported object from
+## 'namespace:DSC2014Tutorial'
+```
+
+```r
 utils::browseURL(path)
 ```
 
@@ -2587,5 +2634,4 @@ utils::browseURL(path)
 --- .segue bg:orange
 
 ## Thanks for Your Attention!
-
 

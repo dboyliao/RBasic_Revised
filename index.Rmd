@@ -169,6 +169,16 @@ And you can claim that you can do sketch by a computer!
   - Barnsley Fern Fractal
   - Battleship
 
+---
+
+## package: DSC2014Tutorial
+
+For the best tutorial experience:
+
+```{r}
+library("DSC2014Tutorial")
+```
+
 
 --- .segue bg:navy
 
@@ -1892,5 +1902,4 @@ utils::browseURL(path)
 --- .segue bg:orange
 
 ## Thanks for Your Attention!
-
 
