@@ -612,6 +612,7 @@ colnames(M1) <- LETTERS[1:12]
 <img src="assets/img/R_Basic_Matrix_ex_name.png" height="75%" width="75%"/>
 </center>
 
+
 ---
 
 ## Matrix: Subsetting by Name
@@ -632,13 +633,14 @@ M1[, 'F']
 What will happend to matrix Mat?
 ```{r, results='hide'}
 Mat <- matrix(c(1:15), 3, 5)
-Mat[3, 3] <- "Ha Ha!"
+Mat[3, 3] <- "Ha Ha!"    # t(Mat)
 ```
 
 *** .explanation
 ```{r, results='hold'}
 Mat
 ```
+
 
 --- .segue bg:green
 
@@ -1471,7 +1473,7 @@ Note: **else if** and **else** are optional.
 
 One simple way to get the data if you're using our package.
 
-```{r, results='hold'}
+```{r, results='hide'}
 data("RBasic_ForLoop_Ex")
 ```
 

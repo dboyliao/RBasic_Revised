@@ -770,6 +770,7 @@ colnames(M1) <- LETTERS[1:12]
 <img src="assets/img/R_Basic_Matrix_ex_name.png" height="75%" width="75%"/>
 </center>
 
+
 ---
 
 ## Matrix: Subsetting by Name
@@ -796,7 +797,7 @@ What will happend to matrix Mat?
 
 ```r
 Mat <- matrix(c(1:15), 3, 5)
-Mat[3, 3] <- "Ha Ha!"
+Mat[3, 3] <- "Ha Ha!"    # t(Mat)
 ```
 
 *** .explanation
@@ -811,6 +812,7 @@ Mat
 ## [2,] "2"  "5"  "8"      "11" "14"
 ## [3,] "3"  "6"  "Ha Ha!" "12" "15"
 ```
+
 
 --- .segue bg:green
 
@@ -2057,10 +2059,6 @@ One simple way to get the data if you're using our package.
 
 ```r
 data("RBasic_ForLoop_Ex")
-```
-
-```
-## Warning: data set 'RBasic_ForLoop_Ex' not found
 ```
 
 
