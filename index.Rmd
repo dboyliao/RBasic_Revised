@@ -1782,26 +1782,58 @@ utils::browseURL(path)
 
 ## Default Values and Scoping Rule
 
-```{r, results='hold'}
+We use following example to demostrate how to set default values in function 
+and the basic scoping rule in R.
+
+```{r, results='hold', cache=FALSE}
 MyFunction <- function(x, y, z=3, ...){
+        print("x, y, z:")
+        print(c(x=x, y=y, z=z))
+        print("The rest of args:")
+        print(c(...))
         return(x + 2*y + 6*z + sum(...))
 }
-(MyFunction(1, 3, 5, 2, 9))
-(MyFunction(1, 3, 5, 2, z = 9))
-(MyFunction(1, 3, 5, y = 2, x = 9))
 ```
 
 ---
 
 ## Default Values and Scoping Rule
 
-```{r, results='hold'}
-MyFunction <- function(x, y, z=3, ...){
-        return(x + 2*y + 6*z + sum(...))
-}
-(MyFunction(1, 3, 5, 2, 9))
-(MyFunction(1, 3, 5, 2, z = 9))
-(MyFunction(1, 3, 5, y = 2, x = 9))
+```{r, results='hold', cache=FALSE}
+MyFunction(x=1, y=3) # It works without z!! (By "default", z = 3)
+```
+
+---
+
+## Default Values and Scoping Rule
+
+```{r, results='hold', cache=FALSE}
+MyFunction(1, 3, 5, 2, 9) 
+```
+
+---
+
+## Default Values and Scoping Rule
+
+```{r, results='hold', cache=FALSE}
+MyFunction(1, 3, 5, 2, z = 9)
+```
+
+---
+
+## Default Values and Scoping Rule
+
+```{r, results='hold', cache=FALSE}
+MyFunction(1, 3, 5, y = 2, x = 9)
+```
+
+
+---
+
+## Default Values and Scoping Rule
+
+```{r, results='hold', cache=FALSE}
+MyFunction(1, 3, 5, y = 2, x = 9)
 ```
 
 `It is time for Mini Project II!`

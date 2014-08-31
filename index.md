@@ -2434,26 +2434,18 @@ utils::browseURL(path)
 
 ## Default Values and Scoping Rule
 
+We use following example to demostrate how to set default values in function 
+and the basic scoping rule in R.
+
 
 ```r
 MyFunction <- function(x, y, z=3, ...){
+        print("x, y, z:")
+        print(c(x=x, y=y, z=z))
+        print("The rest of args:")
+        print(c(...))
         return(x + 2*y + 6*z + sum(...))
 }
-(MyFunction(1, 3, 5, 2, 9))
-(MyFunction(1, 3, 5, 2, z = 9))
-(MyFunction(1, 3, 5, y = 2, x = 9))
-```
-
-```
-## [1] 48
-```
-
-```
-## [1] 68
-```
-
-```
-## [1] 27
 ```
 
 ---
@@ -2462,20 +2454,100 @@ MyFunction <- function(x, y, z=3, ...){
 
 
 ```r
-MyFunction <- function(x, y, z=3, ...){
-        return(x + 2*y + 6*z + sum(...))
-}
-(MyFunction(1, 3, 5, 2, 9))
-(MyFunction(1, 3, 5, 2, z = 9))
-(MyFunction(1, 3, 5, y = 2, x = 9))
+MyFunction(x=1, y=3) # It works without z!! (By "default", z = 3)
+```
+
+```
+## [1] "x, y, z:"
+## x y z 
+## 1 3 3 
+## [1] "The rest of args:"
+## NULL
+```
+
+```
+## [1] 25
+```
+
+---
+
+## Default Values and Scoping Rule
+
+
+```r
+MyFunction(1, 3, 5, 2, 9) 
+```
+
+```
+## [1] "x, y, z:"
+## x y z 
+## 1 3 5 
+## [1] "The rest of args:"
+## [1] 2 9
 ```
 
 ```
 ## [1] 48
 ```
 
+---
+
+## Default Values and Scoping Rule
+
+
+```r
+MyFunction(1, 3, 5, 2, z = 9)
+```
+
+```
+## [1] "x, y, z:"
+## x y z 
+## 1 3 9 
+## [1] "The rest of args:"
+## [1] 5 2
+```
+
 ```
 ## [1] 68
+```
+
+---
+
+## Default Values and Scoping Rule
+
+
+```r
+MyFunction(1, 3, 5, y = 2, x = 9)
+```
+
+```
+## [1] "x, y, z:"
+## x y z 
+## 9 2 1 
+## [1] "The rest of args:"
+## [1] 3 5
+```
+
+```
+## [1] 27
+```
+
+
+---
+
+## Default Values and Scoping Rule
+
+
+```r
+MyFunction(1, 3, 5, y = 2, x = 9)
+```
+
+```
+## [1] "x, y, z:"
+## x y z 
+## 9 2 1 
+## [1] "The rest of args:"
+## [1] 3 5
 ```
 
 ```
@@ -2548,7 +2620,7 @@ sample.int(5, 1)   # 從 1~5 中隨機抽取 1 個數字。
 ```
 
 ```
-## [1] 1
+## [1] 4
 ```
 
 - cat():

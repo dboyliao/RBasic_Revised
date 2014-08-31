@@ -3339,21 +3339,16 @@ utils::browseURL(path)
     <h2>Default Values and Scoping Rule</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">MyFunction &lt;- function(x, y, z=3, ...){
+    <p>We use following example to demostrate how to set default values in function 
+and the basic scoping rule in R.</p>
+
+<pre><code class="r">MyFunction &lt;- function(x, y, z=3, ...){
+        print(&quot;x, y, z:&quot;)
+        print(c(x=x, y=y, z=z))
+        print(&quot;The rest of args:&quot;)
+        print(c(...))
         return(x + 2*y + 6*z + sum(...))
 }
-(MyFunction(1, 3, 5, 2, 9))
-(MyFunction(1, 3, 5, 2, z = 9))
-(MyFunction(1, 3, 5, y = 2, x = 9))
-</code></pre>
-
-<pre><code>## [1] 48
-</code></pre>
-
-<pre><code>## [1] 68
-</code></pre>
-
-<pre><code>## [1] 27
 </code></pre>
 
   </article>
@@ -3366,18 +3361,106 @@ utils::browseURL(path)
     <h2>Default Values and Scoping Rule</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">MyFunction &lt;- function(x, y, z=3, ...){
-        return(x + 2*y + 6*z + sum(...))
-}
-(MyFunction(1, 3, 5, 2, 9))
-(MyFunction(1, 3, 5, 2, z = 9))
-(MyFunction(1, 3, 5, y = 2, x = 9))
+    <pre><code class="r">MyFunction(x=1, y=3) # It works without z!! (By &quot;default&quot;, z = 3)
+</code></pre>
+
+<pre><code>## [1] &quot;x, y, z:&quot;
+## x y z 
+## 1 3 3 
+## [1] &quot;The rest of args:&quot;
+## NULL
+</code></pre>
+
+<pre><code>## [1] 25
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-156" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Default Values and Scoping Rule</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">MyFunction(1, 3, 5, 2, 9) 
+</code></pre>
+
+<pre><code>## [1] &quot;x, y, z:&quot;
+## x y z 
+## 1 3 5 
+## [1] &quot;The rest of args:&quot;
+## [1] 2 9
 </code></pre>
 
 <pre><code>## [1] 48
 </code></pre>
 
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-157" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Default Values and Scoping Rule</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">MyFunction(1, 3, 5, 2, z = 9)
+</code></pre>
+
+<pre><code>## [1] &quot;x, y, z:&quot;
+## x y z 
+## 1 3 9 
+## [1] &quot;The rest of args:&quot;
+## [1] 5 2
+</code></pre>
+
 <pre><code>## [1] 68
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-158" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Default Values and Scoping Rule</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">MyFunction(1, 3, 5, y = 2, x = 9)
+</code></pre>
+
+<pre><code>## [1] &quot;x, y, z:&quot;
+## x y z 
+## 9 2 1 
+## [1] &quot;The rest of args:&quot;
+## [1] 3 5
+</code></pre>
+
+<pre><code>## [1] 27
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-159" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Default Values and Scoping Rule</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">MyFunction(1, 3, 5, y = 2, x = 9)
+</code></pre>
+
+<pre><code>## [1] &quot;x, y, z:&quot;
+## x y z 
+## 9 2 1 
+## [1] &quot;The rest of args:&quot;
+## [1] 3 5
 </code></pre>
 
 <pre><code>## [1] 27
@@ -3389,7 +3472,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-156" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-160" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project II - Battleship</h2>
@@ -3400,7 +3483,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-157" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-161" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project II - Battleship</h2>
@@ -3412,7 +3495,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-158" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-162" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Battleship: Tips</h2>
@@ -3442,7 +3525,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-159" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-163" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Battleship: Template</h2>
@@ -3458,7 +3541,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-160" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-164" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Some Function You Might Need</h2>
@@ -3478,7 +3561,7 @@ utils::browseURL(path)
 <pre><code class="r">sample.int(5, 1)   # 從 1~5 中隨機抽取 1 個數字。
 </code></pre>
 
-<pre><code>## [1] 1
+<pre><code>## [1] 4
 </code></pre>
 
 <ul>
@@ -3498,7 +3581,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-161" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-165" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Battleship 成品範例</h2>
@@ -3512,7 +3595,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-162" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-166" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Help Yourself by Yourself</h2>
@@ -3523,7 +3606,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-163" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-167" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Why?</h2>
@@ -3539,7 +3622,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-164" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-168" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>But How?</h2>
@@ -3555,7 +3638,7 @@ utils::browseURL(path)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-165" style="background:orange; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-169" style="background:orange; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Thanks for Your Attention!</h2>
@@ -4502,62 +4585,86 @@ utils::browseURL(path)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=156 title='Mini Project II - Battleship'>
+        data-slide=156 title='Default Values and Scoping Rule'>
          156
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=157 title='Mini Project II - Battleship'>
+        data-slide=157 title='Default Values and Scoping Rule'>
          157
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=158 title='Battleship: Tips'>
+        data-slide=158 title='Default Values and Scoping Rule'>
          158
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=159 title='Battleship: Template'>
+        data-slide=159 title='Default Values and Scoping Rule'>
          159
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=160 title='Some Function You Might Need'>
+        data-slide=160 title='Mini Project II - Battleship'>
          160
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=161 title='Battleship 成品範例'>
+        data-slide=161 title='Mini Project II - Battleship'>
          161
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=162 title='Help Yourself by Yourself'>
+        data-slide=162 title='Battleship: Tips'>
          162
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=163 title='Why?'>
+        data-slide=163 title='Battleship: Template'>
          163
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=164 title='But How?'>
+        data-slide=164 title='Some Function You Might Need'>
          164
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=165 title='Thanks for Your Attention!'>
+        data-slide=165 title='Battleship 成品範例'>
          165
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=166 title='Help Yourself by Yourself'>
+         166
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=167 title='Why?'>
+         167
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=168 title='But How?'>
+         168
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=169 title='Thanks for Your Attention!'>
+         169
       </a>
     </li>
   </ul>
