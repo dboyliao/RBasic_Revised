@@ -2356,14 +2356,6 @@ One simple way to open the template if you're using our package.
 
 ```r
 path <- DSC2014Tutorial::Basic_file("barnsley_fern_template.R")
-```
-
-```
-## Error: 'Basic_file' is not an exported object from
-## 'namespace:DSC2014Tutorial'
-```
-
-```r
 utils::browseURL(path)
 ```
 
@@ -2380,14 +2372,6 @@ Reference answer.
 
 ```r
 path <- DSC2014Tutorial::Basic_file("barnsley_fern_answer.R")
-```
-
-```
-## Error: 'Basic_file' is not an exported object from
-## 'namespace:DSC2014Tutorial'
-```
-
-```r
 utils::browseURL(path)
 ```
 
@@ -2543,14 +2527,6 @@ One simple way to open the template file if you are using our package.
 
 ```r
 path <- DSC2014Tutorial::Basic_file("battleship_template.R")
-```
-
-```
-## Error: 'Basic_file' is not an exported object from
-## 'namespace:DSC2014Tutorial'
-```
-
-```r
 utils::browseURL(path)
 ```
 
@@ -2596,14 +2572,6 @@ print('I love R!'); cat('I love R!')
 
 ```r
 path <- DSC2014Tutorial::Basic_file("battleship_answer.R")
-```
-
-```
-## Error: 'Basic_file' is not an exported object from
-## 'namespace:DSC2014Tutorial'
-```
-
-```r
 utils::browseURL(path)
 ```
 

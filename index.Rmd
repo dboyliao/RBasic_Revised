@@ -1845,7 +1845,7 @@ map =list(c('O', 'O', 'O', 'O', 'O'),
 
 One simple way to open the template file if you are using our package.
 
-```{r, results='hide'}
+```{r, results='hide', cache=FALSE}
 path <- DSC2014Tutorial::Basic_file("battleship_template.R")
 utils::browseURL(path)
 ```
@@ -1874,7 +1874,7 @@ print('I love R!'); cat('I love R!')
 
 ## Battleship 成品範例 
 
-```{r, results='hide'}
+```{r, results='hide', cache=FALSE}
 path <- DSC2014Tutorial::Basic_file("battleship_answer.R")
 utils::browseURL(path)
 ```
