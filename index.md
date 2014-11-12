@@ -40,7 +40,7 @@ It is cool to be a hacker!!<br>
 
 --- .segue bg:navy
 
-## Our Gaol Today: Become a Cool Guy!
+## Our Goal: Become a Cool Guy!
 
 
 ---
@@ -2599,6 +2599,13 @@ One simple way to open the template file if you are using our package.
 
 ```r
 path <- DSC2014Tutorial::Basic_file("battleship_template.R")
+```
+
+```
+## Error: there is no package called 'DSC2014Tutorial'
+```
+
+```r
 utils::browseURL(path)
 ```
 
@@ -2644,6 +2651,13 @@ print('I love R!'); cat('I love R!')
 
 ```r
 path <- DSC2014Tutorial::Basic_file("battleship_answer.R")
+```
+
+```
+## Error: there is no package called 'DSC2014Tutorial'
+```
+
+```r
 utils::browseURL(path)
 ```
 
