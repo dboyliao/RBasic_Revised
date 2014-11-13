@@ -382,7 +382,9 @@ slides.layout-faux-widescreen > slide {
 /* line 248, ../scss/default.scss */
 slides.layout-widescreen > slide,
 slides.layout-faux-widescreen > slide {
-  width:95%;
+  width:98%;
+  height:96%;
+  margin-left: -49%;
 }
 /* line 253, ../scss/default.scss */
 slides.layout-widescreen > slide.far-past,
