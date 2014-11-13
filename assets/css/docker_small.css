@@ -382,7 +382,7 @@ slides.layout-faux-widescreen > slide {
 /* line 248, ../scss/default.scss */
 slides.layout-widescreen > slide,
 slides.layout-faux-widescreen > slide {
-  width:98%;
+  width:940px;
   height:96%;
   margin-left: -49%;
 }
