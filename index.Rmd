@@ -1,0 +1,1813 @@
+---
+title       : DSC 2014
+subtitle    : R Basic Tutorial
+author      : Dboy
+job         : Taiwan UseR Group for Hackers
+framework   : revealjs        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax, bootstrap]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+---
+
+<h1>
+  <font color='navy'>DSC 2014</font>
+</h1>
+<h2>
+  <font color='yellow'>R Basic Tutorial</font>
+</h2>
+
+<h3>
+  <font color="wheat">Dboy</font>
+</h3>
+
+
+---
+
+# Why R?
+
+---
+
+# Why not R?
+
+---
+
+- 1. It is FREE!
+- 2. It is open!
+- 3. It is popular! ---> [Kaggle](https://www.kaggle.com/wiki/Software)
+- 4. It is powerful!
+
+---
+
+<br>
+<br>
+It is cool to be a hacker!!
+<br>
+<img src="assets/img/cool_hacker.jpg" height="60%" width="60%" />
+<br>
+<a src='http://www.teachprivacy.com/category/phishing/'>圖片來源</a>
+<p class="fragment">
+Our Goal: Become a Cool Guy!
+</p>
+
+---
+
+## Mini Project I: Barnsley Fern Fractal
+
+<font size = '6'>
+Work this cool picture out.<br>
+And you can claim that you can do sketch by a computer!
+<br>
+<br>
+</font>
+
+<img src="assets/img/Barnsley.gif" height="70%" width="70%" />
+
+---
+
+## Mini Project II: Battleship
+
+<img src="assets/img/battle_ship.gif" height="30%" width="30%" />
+
+---
+
+## 最後讓我們打個廣告XDD
+
+接下來的系列課程:
+
+- ETL
+- Data Analysis
+- Data Visulization
+
+<br>
+<p class='fragment'>
+在今天的課程裡也會讓大家體驗一下每個課程的主題是什麼。
+</p>
+
+---
+
+# Syllabus
+
+---
+
+## Syllabus
+
+<ul>
+  <li><strong>DATA: Where the Story Begins</strong>
+    <ul>
+      <li>資料屬性</li>
+      <li>資料形態</li>
+    </ul>
+  </li>
+  <li><strong>Basic Operations - Phase I</strong>
+    <ul>
+      <li>Logical Operations: &, |, ==</li>
+    </ul>
+  </li>
+  <li><strong>Subsetting - Phase I</strong>
+    <ul>
+      <li>Vector and List</li>
+      <li>Matrix Subsetting - Phase I</li>
+      <li>Data Frame Subsetting - Phase I</li>
+    </ul>
+  </li>
+  <li>Subsetting - Phase II
+    <ul>
+      <li>Matrix Subsetting - Phase II</li>
+      <li>Data Frame Subsetting - Phase II</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+<ul>
+  <li><strong>Merging</strong>
+    <ul>
+      <li>cbind v.s rbind</li>
+    </ul>
+  </li>
+  <li><strong>Basic Operation - Phase II</strong>
+    <ul>
+      <li>Arithmetic Operations</li>
+    </ul>
+  </li>
+  <li><strong>Loops and Control Flow</strong>
+    <ul>
+      <li>for</li>
+      <li>if / else if / else</li>
+      <li>while</li>
+    </ul>
+  </li>
+  <li><strong>Function</strong>
+    <ul>
+      <li>Basic Syntex</li>
+      <li>Scoping Rules</li>
+    </ul>
+  </li>
+  <li><strong>Mini Project</strong>
+    <ul>
+      <li>Barnsley Fern Fractal</li>
+      <li>Battleship</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+## package: DSC2014Tutorial
+
+For the best tutorial experience:
+
+<a href="https://github.com/TaiwanRUserGroup/DSC2014Tutorial">Installation</a>
+
+<p class='fragment'>
+  This package contains all codes and packages we need during this and other
+  tutorial sessions.
+</p>
+
+---
+
+Once you are done with installation:
+
+```{r, cache=T}
+library("DSC2014Tutorial")
+```
+
+<p class='fragment'>
+  Let's begin!
+</p>
+
+---
+
+# Data: Where the Story Begins
+
+---
+
+### 以資料屬性來分：
+- Character (字串)
+- Integer (整數)
+- Numeric (雙浮點數 / 實數)
+- Logical (邏輯值)
+- Complex (複數)
+
+---
+
+### 以資料形態來分：
+- 一般變數
+- Vector
+- Matrix
+- Factor and Data Frame
+
+---
+
+## Examples
+
+```{r, results='hold'}
+(x <- 'R is easy to learn!') # 這是字串
+(y <- 3) # 這是整數
+(z <- pi) # 圓周率
+```
+
+---
+
+```{r, results='hold'}
+(k <- 1 + 2i) # 複數
+(boo1 <- TRUE) # TRUE (or T for short)
+(boo2 <- FALSE) # FALSE (or F for short)
+```
+
+---
+
+# Logical Operation
+
+---
+
+## Basic Operations: & (and), | (or), ==
+
+```{r, results='hold'}
+bol1 <- T; bol2 <- TRUE
+bol3 <- F
+('Dboy' == 'Dboy')
+(bol1 == bol2)
+(bol1 & bol2)
+(bol3 | 4 > 5)
+```
+
+---
+
+```{r, results='hold'}
+4 > 2
+1 >= 2
+a <- NA
+a == NA     # 要用is.na(a)才會傳回TRUE或FALSE。(另外還有is.nan())
+is.na(a)
+```
+
+---
+
+## Fun Time
+
+```{r, results='hold'}
+my_vec <- c(1, 2, 5, 90, 37)
+ind <- my_vec >= 5
+sum(ind)
+```
+<p class='fragment'>Why???</p>
+
+---
+
+# Subsetting Phase I
+## Index
+
+---
+
+## Vector and List
+
+<div align='left'>
+<ul>
+  <li>c(): concatenation function</li>
+  <li>範例：
+  </li>
+</ul>
+</div>
+
+```{r, results = 'hold'}
+vec1 <- c(1, 2, 3)
+vec2 <- c('a', 'b', 'c')
+```
+<div align='left'>
+  <ul>
+    <li>vector 中所有元素都必須是同一種資料屬性。</li>
+    <li>Named Vector:</li>
+  </ul>
+</div>
+
+```{r, results = 'hold'}
+(Bob <- c(age = 27, height = 187, weight = 80))
+```
+
+---
+
+## Funtime
+
+```{r, results='hold'}
+(mix_vec1 <- c('a', 2))
+(mix_vec2 <- c(2, T))
+```
+
+<p class='fragment'>Why???</p>
+
+---
+
+## Useful Methods for Vector
+- length(): 
+  - 語法: **length(my_vec)**
+  - 傳回 my_vec 的長度
+- names():
+ - 語法: **names(my_vec)**
+ - 傳回 my_vec 各維度的名字。
+
+
+---
+
+## Examples
+
+```{r, results = 'hold'}
+vec <- c(4, 5, 6, 11, 5)
+length(vec)
+Bob
+names(Bob)
+```
+
+
+---
+
+## Examples 
+
+c() 也可以被用來結合兩個向量。
+
+```{r, results = "hold"}
+x <- c(1:5)
+y <- c(2, 4, 8)
+z <- c(x, y)
+z
+```
+
+---
+
+## Exercise
+
+定義一個向量 me 記錄自己的身高(公分)、體重(公斤)與年齡。
+
+<p class='fragment'>女性參考答案： me <- c(age = "18 forever", W = "secret", height="非常高佻")</p>
+
+---
+
+如果我還想記錄頭髮的顏色跟電話號碼呢?
+
+<p class='fragment'>把 hair_color='Black' 存進去?</p>
+<p class='fragment'>如果電話是 +886 911333966 呢?</p>
+<p class='fragment'>都用字串存好嗎?</p>
+
+---
+
+## List
+
+- list 是非常方便好用的資料形態。尤其是需儲存不同類型資料的時候，特別好用。
+
+- 還記得剛剛提過的優先順序嗎？
+
+```{r, results='hold'}
+c(1, '2')
+c(1, T)
+```
+
+---
+
+### 比較
+
+```{r, results='hold'}
+list(1, '2')
+list(1, T)
+```
+
+---
+
+```{r, results='hold'}
+data(iris)
+(Bob <- list(age=27, weight = 80,
+            favorite_data_name = 'iris', favorite_data = iris))
+```
+
+---
+
+<p class='fragment'>我們可以用 list 來儲存異質的資料。</p>
+<p class='fragment'>但如何從中擷取出想要的資料呢?</p>
+<p class='fragment'>在接下來的 Subsetting 單元中將一一介紹。</p>
+
+---
+
+# Vector Subsetting
+## Phase I
+
+---
+
+## Subsetting by Index
+
+<div align='left'>
+<code>
+  <font size="6">
+  Syntax: vec[index]
+  </font>
+</code>
+<br>
+Examples:
+</div>
+
+```{r, results='hold'}
+vec <- c(1, 5, 10, 33, 6)
+vec[3]
+vec[length(vec)]
+```
+
+---
+
+## Subsetting by Name
+
+<div align='left'>
+<code>
+<font size="6">
+Syntax: vec["name"]
+</font>
+</code>
+</div>
+
+```{r, results='markup'}
+Dboy <- c(age=27, weight=82, height=172)
+Dboy["age"]
+```
+
+---
+
+# List Subsetting
+## Phase I
+
+---
+
+## Subsetting by Index
+
+<div align='left'>
+<code>
+  <font size="6">
+    Syntax: a_list[index] or a_list[[index]]
+  </font>
+</code>
+<br>
+Examples:
+</div>
+
+```{r, results='hold'}
+Bob[1]; class(Bob[1])
+Bob[[1]]; class(Bob[[1]])
+```
+
+---
+
+## Subsetting by Name
+
+<div align='left'>
+<code>
+  <font size="6">
+    Syntax: a_list["name"] or a_list[["name"]]
+  </font>
+</code>
+<br>
+Examples:
+</div>
+
+```{r, results='hold'}
+Bob["age"]
+Bob[["age"]]
+```
+
+---
+
+# Matrix Subsetting
+## Phase I
+
+---
+
+## Matrix: First Look
+
+<br>
+<font size="6" color="SlateGray">
+A Matrix is something looks like this:
+</font>
+
+<img src="assets/img/R_Basic_Matrix.png" height="100%" width="100%"/>
+
+---
+
+## Dimension
+
+<br>
+<font size="6" color="SlateGray">
+A Matrix has two dimensions, denoted by i and j.<br>
+i for row indexing, j for column indexing.
+</font>
+
+
+---
+
+## Dimension
+
+<br>
+<font size="6" color="SlateGray">
+ i alone can specify one row.
+</font>
+
+<img src="assets/img/R_Basic_Matrix_row.png" height="100%" width="100%"/>
+
+
+---
+
+## Dimension
+
+<br>
+<font size="6" color="SlateGray">
+j alone can specify one column.
+</font>
+
+<img src="assets/img/R_Basic_Matrix_col.png" height="100%" width="100%"/>
+
+---
+
+## Dimension
+
+<br>
+<font size="6" color="SlateGray">
+i together with j can specify one element in a matrix.
+</font>
+
+<img src="assets/img/R_Basic_Matrix_RowAndCol.png" height="100%" width="100%"/>
+
+---
+
+
+## Matrix in R
+
+<div align='left'>
+<code>
+  <font size="5">
+    Syntax: matrix(elements, nrow, ncol, byrow = FALSE)
+  </font>
+</code>
+</div>
+
+```{r, results='hold'}
+M1 <- matrix(c(1:144), 12, 12)
+```
+
+<center>
+<img src="assets/img/R_Basic_Matrix_ex.png" height="75%" width="75%"/>
+</center>
+
+---
+
+## Matrix: Subsetting by Index.
+
+<div align='left'>
+<code>
+  <font size='6'>
+    Syntax: my_matrix[i, ] or my_matrix[, j]
+  </font>
+</code>
+</div>
+
+```{r, results='hold'}
+M1[6, ]
+```
+
+<center>
+<img src="assets/img/R_Basic_Matrix_ex_row.png" height="65%" width="65%"/>
+</center>
+
+---
+
+## Matrix: Subsetting by Index
+
+```{r, results='hold'}
+M1[, 6]
+```
+
+<center>
+<img src="assets/img/R_Basic_Matrix_ex_col.png" height="70%" width="70%"/>
+</center>
+
+---
+
+## Matrix: Rename
+
+```{r, results='hold'}
+colnames(M1) <- LETTERS[1:12]
+```
+
+<center>
+<img src="assets/img/R_Basic_Matrix_ex_name.png" height="75%" width="75%"/>
+</center>
+
+
+---
+
+## Matrix: Subsetting by Name
+
+```{r, results='hold'}
+M1[, 'F']
+```
+
+<center>
+<img src="assets/img/R_Basic_Matrix_ex_name_ref.png" height="65%" width="65%"/>
+</center>
+
+---
+
+## Fun Time
+
+What will happend to matrix Mat?
+```{r, results='hide'}
+Mat <- matrix(c(1:15), 3, 5)
+Mat[3, 3] <- "Ha Ha!"    # t(Mat)
+```
+
+<pre class='fragment'><code>##      [,1] [,2] [,3]     [,4] [,5]
+## [1,] &quot;1&quot;  &quot;4&quot;  &quot;7&quot;      &quot;10&quot; &quot;13&quot;
+## [2,] &quot;2&quot;  &quot;5&quot;  &quot;8&quot;      &quot;11&quot; &quot;14&quot;
+## [3,] &quot;3&quot;  &quot;6&quot;  &quot;Ha Ha!&quot; &quot;12&quot; &quot;15&quot;
+</code></pre>
+
+<p class='fragment'><font color="yellow"> Why? </font></p>
+
+---
+
+# Data Frame Subsetting
+## Phase I
+
+---
+
+## Data Frame: First Look
+
+<center>
+<br>
+<font size="6" color="SlateGray">
+We take iris data set for example
+</font>
+</center>
+<center>
+<img src="assets/img/iris.png" height="70%" width=70%>
+</center>
+
+---
+
+## Dimension
+
+<center>
+<br>
+<font size="6" color="SlateGray">
+Similer to the matrix, a data frame also has two dimensions.
+ <br>
+</font>
+    <center>
+    <img src="assets/img/iris_index.png" height="70%" width="70%">
+    </center>
+</center>
+
+---
+
+## Data Frame: Subsetting by Index
+
+```{r, results='hold'}
+data(iris); iris <- iris[1:12, ];iris[6, ]
+```
+
+<center>
+<img src="assets/img/iris_row.png" height="70%" width="70%">
+</center>
+
+---
+
+```{r, results='hold'}
+iris[, 2]
+```
+
+<center>
+<img src="assets/img/iris_col.png" height="70%" width="70%">
+</center>
+
+---
+
+## Data Frame: Subsetting by Column Name
+
+```{r, results='hold'}
+iris[, "Sepal.Width"]
+```
+
+<center>
+<img src="assets/img/iris_col.png" height="70%" width="70%">
+</center>
+
+---
+
+## Data Frame: Rename
+
+```{r, results='hold'}
+colnames(iris) <- c("Sepal.L", "Sepal.W", "Petal.L", "Petal.W", "Species")
+iris
+```
+
+
+---
+
+## One Simple Way to Construct a Data Frame.
+
+```{r, results='hold'}
+my_list <- list(Age = c(17, 22, 38), B.Type = c("A", "B", "O"))
+(my_data <- as.data.frame(my_list))
+str(my_data)
+```
+
+---
+
+## Fun Time
+
+> 1. 向你身邊的 5 個人詢問基本資料。(上課不忘交新朋友)
+> 2. 將得到的資料存成一個 data frame。
+> 3. 如果問不到.... NA 是你的好朋友。
+
+---
+
+# Subsetting Phase II
+## Indices
+
+---
+
+## Vector: Reference by Indices
+
+In R, we use c() to specify multiple indices.
+
+<div align='left'>
+  Example:
+</div>
+
+```{r, results='hold'}
+Dboy <- c(age=27, weight=82, height=172)
+(Dboy)
+(Dboy[c(1, 3)])
+```
+
+---
+
+## Vector: Multi Indexing with Expression
+
+<div align='left'>
+Examples:
+</div>
+
+```{r, results='hold'}
+data(cars)
+speed <- cars[, "speed"]
+speed[speed > 5]
+```
+
+---
+
+## Vector: Multi Indexing with which()
+
+<div align='left'>
+<code>
+  <font size="6">
+    Syntax: which(expression)
+  </font>
+</code>
+<br>
+Examples:
+</div>
+
+```{r, results='hold'}
+my_vec <- runif(30, 0, 1) # 用 runif 從(0, 1)均勻分佈中抽取 30 個值。
+(ind <- which(my_vec > 0.5))
+(my_vec[ind])
+```
+
+---
+
+## Vector: Multi Indexing with which()
+
+<div align='left'>
+<code>
+  <font size="6">
+    Syntax: which(expression)
+  </font>
+</code>
+<br>
+Examples:
+</div>
+
+```{r, results='hold'}
+(ind <- which(names(Dboy) %in% c("age", "weight")))
+Dboy[ind]
+```
+
+
+---
+
+## List: Subsetting by Indices
+
+Similarly, we use c() for multiple indexing in a list.
+
+<div align='left'>
+<code>
+  <font size="6">
+    Syntax: my_list[c(ind1, ind2, ...)]
+  </font>
+</code>
+<br>
+Example:
+</div>
+
+```{r, results='hold'}
+Bob[c(1, 3)]
+```
+
+---
+
+## List: Subsetting with which()
+
+<div align='left'>
+Example:
+</div>
+
+```{r, results='hold'}
+(names(Bob))
+(ind <- which(names(Bob) %in% c("age", "favorite_data")))
+```
+
+
+---
+
+```{r, results='hold'}
+Bob[ind]
+```
+
+---
+
+# Matrix Subsetting
+## Phase II
+
+---
+
+## Matrix: Subsetting with Indices
+
+<div align='left'>
+<code>
+  <font size='6'>
+    Syntax: my_matrix[c(rowind1, rowind2, ...), c(colind1, colind2, ...)]
+  </font>
+</code>
+<br>
+Example:
+</div>
+
+```{r, results='hold'}
+M1[c(2, 4), 2:4]
+```
+
+<center>
+<img src="assets/img/Matrix_Subsetting_2.png" width="60%" height="60%">
+</center>
+
+---
+
+## Data Frame: Subsetting with Indices
+
+<div align='left'>
+<code>
+  <font size='6'>
+    Syntax: myDataFrame[c(rowind1, rowind2, ...), c(colind1, colind2, ...)]
+  </font>
+</code>
+<br>
+Example:
+</div>
+
+```{r, results='hold'}
+data(iris); iris <- iris[1:12, ]
+iris[c(2, 5), seq(from=1, to = 5, by = 2)]
+```
+<center>
+<img src="assets/img/DataFrameSubsetting2.png" width="60%" height="60%">
+</center>
+
+---
+
+# Merging
+## rbind and cbind
+
+---
+
+## Merging: rbind
+
+<font size="6">
+  <strong>First Look:</strong>
+</font>
+<br>
+<img src="assets/img/rbind.png" width="35%" height="35%">
+
+<ul>
+  <li class='fragment'>rbind: Row-like Binding (merge by column).</li>
+  <li class='fragment'>Merge two data frames (or matrices) like rows.</li>
+</ul>
+
+---
+
+<div align='left'>
+<code>
+  <font size='6'>
+    Syntax: rbind(A, B) where A and B are two data frames or matrices
+  </font>
+</code>
+<br>
+Again, let's play with iris data set. <br>
+Example:
+</div>
+
+```{r, results='hold'}
+data(iris)
+iris[1:3, ]
+```
+
+```{r, results='hold'}
+iris[100:103, ]
+```
+
+---
+
+```{r, results='hold'}
+rbind(iris[1:3, ], iris[100:103, ])
+```
+
+---
+
+## Merging: cbind
+
+<font size="6">
+**First Look**: 
+</font>
+  <br>
+  <br>
+
+<center>
+<img src="assets/img/cbind.png" width="50%" height="50%">
+</center>
+
+<ul>
+  <li class='fragment'>cbind: Column-like Binding (merge by row).</li>
+  <li class='fragment'>Merge two data frames (or matrices) like columns.</li>
+</ul>
+
+
+---
+
+## Merging: cbind
+
+<div align='left'>
+<code>
+  <font size='6'>
+    Syntax: cbind(A, B) where A and B are two data frames or matrices
+  </font>
+</code>
+<br>
+Our beloved iris data set. <br>
+Example:
+</div>
+
+```{r, results='hold'}
+(A <- iris[1:5, 2:4])
+```
+
+```{r, results='hold'}
+(B <- iris[8:12, 1:2])
+```
+
+---
+
+```{r, results='hold'}
+cbind(A, B)
+```
+
+---
+
+## Fun Time
+
+還記得剛剛我們怎麼交新朋友的嗎?
+
+<ol>
+  <li class='fragment'>向剛剛問過的新朋友多問兩個額外的資料，並合併至原來的 data frame。(cbind or rbind ?)</li>
+  <li class='fragment'>再多問兩位新朋友，並把新朋友的資料合併至原來的 data frame。(cbind or rbind ?)</li>
+</ol>
+
+---
+
+# sorting and ordering
+
+---
+
+### The Difference Between sort() and order()
+
+<font size="5">
+- **sort()**: sort (or order) a vector or factor (partially) into ascending or descending order.
+</font>
+<font size="5">
+- **order()**: order returns a permutation which rearranges its first argument into ascending or descending order, breaking ties by further arguments.
+</font>
+
+<center>
+<img src="assets/img/Blah.jpg" width="40%" height="40%" class="fragment">
+</center>
+
+---
+
+<center>
+<img src="assets/img/What.png" width="50%" height="50%">
+</center>
+
+---
+
+## Let the Code Reveals Itself
+
+<div align='left'>Examples:</div>
+
+```{r, results='hold'}
+Sepal.Length <- iris[1:12, "Sepal.Length"]
+(sort(Sepal.Length))
+(order(Sepal.Length))
+```
+
+---
+
+## Ordering by Multiple Arguments
+
+<div align='left'>Examples:</div>
+
+```{r, results='hold'}
+ind <- order(iris[1:12, "Sepal.Length"], iris[1:12, "Sepal.Width"])
+(iris_ordered <- iris[ind, ]) 
+```
+
+---
+
+## Play With It And You Will Master It!
+
+我們用房貸餘額資料來練習! (cl_info_other.csv)
+
+之後會在 ETL 課程碰到它，也會學到進階的資料處理技巧。
+
+
+---
+
+
+```{r, result = 'hide'}
+# read.table 小技巧。
+tmp <- read.table(DSC2014Tutorial::ETL_file('cl_info_other.csv'), sep = ',',
+                 stringsAsFactors = F, header = T, nrows = 100)
+colClasses <- sapply(tmp, class)
+DF <- read.table(DSC2014Tutorial::ETL_file('cl_info_other.csv'), sep = ',',
+                 header = T, colClasses = colClasses)
+```
+
+
+<img src="assets/img/read_no_colClasses.png", height=80%, width=80% class='fragment'/>
+<img src="assets/img/read_colClasses.png", height=80%, width=80% class='fragment'/>
+
+---
+
+## Exercises:
+
+1. 顯示 DF 前 20 筆資料與所有欄位的名稱。
+3. 將 mortgage_cnt < 2053 的資料另外儲存成 banks_below。
+4. 將 mortgage_cnt >= 22538 的資料另外儲存成 banks_above。
+5. 將 banks_below 與 banks_above 合併成 DF2。
+6. 將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order)
+
+<br>
+
+<div class='fragment'>
+<font size='6'>
+學員OS: 這作業實在太 trivial 了，簡直侮辱我的智慧。
+</font>
+</div>
+<div class='fragment'>
+<font size='6'>
+接下來的 ETL 課程保證會滿足你的渴望!
+</font>
+</div>
+
+---
+
+## Useful Functions
+
+給定一個名叫 data 的 data frame (or matrix)
+
+- names(data): 傳回 data 的所有欄位名稱。
+
+- nrow(data)/ncol(data): 傳回 data 的列 / 行數目。
+
+- dim(data)
+
+- head(data, n)/tail(data, n)/View(data)
+
+---
+
+# Factor
+
+---
+
+## Factor: First Look
+
+```{r, results='hold'}
+(Petal.W <- as.factor(iris[1:12, "Petal.Width"]))
+```
+<p class='fragment'>有啥特別的? 不就多個 levels 嗎? 跟向量不是差不多?</p>
+
+<p class='fragment'>同款就不同師父啊(台)</p>
+
+---
+
+## Try This!
+
+```{r, results='hide'}
+Petal.W <- as.numeric(Petal.W)
+```
+
+<div align='left'>
+  <font color='yellow'>
+    Which is the correct outcome?
+  </font>
+</div>
+
+<ol>
+  <li>0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2</li>
+  <li>"I" "love" "data" "science" "It's" "the" "coolest" "thing" "ever" </li>
+  <li>2 2 2 2 2 4 3 2 2 1 2 2</li>
+  <li>None of above.</li>
+</ol>
+
+<div align='left'>
+<p class='fragment'>
+  <font color='navy'>
+    The answer is 3.
+  </font>
+</p>
+<p class='fragment'>
+  <font color='red'>
+    But why?
+  </font>
+</p>
+</div>
+
+---
+
+## The Answer
+
+**This is what you really get**:
+
+```{r, results='hold'}
+Petal.W
+as.numeric(Petal.W)
+```
+
+---
+
+<center>
+<img src="assets/img/What.png" width="50%" height="50%">
+</cent>
+
+---
+
+## A Closer Look
+
+<font size="6">
+**Vector in R**
+</font>
+  <br>
+<center>
+<img src="assets/img/Vector.png" width="70%" height="70%">
+</center>
+
+---
+
+## A Closer Look
+
+<font size="6">
+**Factor in R: A Key-Value Mapping**
+</font>
+  <br>
+<center>
+<img src="assets/img/Factor.png" width="70%" height="70%">
+</center>
+
+---
+
+# Build-in Function
+## factor()
+
+---
+
+## factor()
+
+<div align='left'>
+<code>
+  <font size="6">
+  Syntax: factor(x)
+  </font>
+</code>
+<br>
+Example:
+</div>
+
+```{r, results='hold'}
+test_factor <- c(1, 3, 3, 5, 2, 4, 2, 5)
+test_factor <- factor(test_factor)
+```
+<div class='fragment'>
+<pre><code>## [1] 1 3 3 5 2 4 2 5
+## Levels: 1 2 3 4 5
+</code></pre>
+</div>
+
+---
+
+## Build-in Function: factor()
+
+<div align='left'>
+<code>
+  <font size="6">
+    Syntax: factor(x)
+  </font>
+</code>
+<br>
+Example:
+</div>
+
+```{r, results='hold'}
+levels(test_factor) <- c("A", "B", "C", "D", "E")
+test_factor
+```
+
+---
+
+## Pop Quiz
+
+How can we correctly convert a factor into a vector? <br>
+
+<div class='fragment' align='left'>
+<font size='6'>Q: my_factor <- factor(seq(10, 1, -1))</font>
+</div>
+
+<div class='fragment' align='left'><font size='6'>Hint</font></div>
+<ol>
+  <li class='fragment'>my_vec <- seq(10, 1, by = -1)</li>
+  <li class='fragment'>my_vec[c(3, 3, 5, 1, 6)]</li>
+  <li class='fragment'>levels(my_factor): this will give you a vector of levels of a factor.</li>
+</ol>
+
+
+---
+
+## The Answer
+
+```{r, results='hold'}
+(my_factor <- factor(seq(10, 1, -1)))
+Levels <- levels(my_factor)
+(my_vector <- Levels[as.numeric(my_factor)])
+```
+
+---
+
+# Loops and Flow Control
+
+---
+
+## For Loop
+
+### Syntex:
+
+    for (iterator){
+        #Do something here....
+    } 
+
+### Example: 土炮 sum()
+
+```{r, results='hold'}
+# 從 1 加到 10
+final_result <- 0
+for (i in 1:10){
+        final_result <- final_result + i
+}
+final_result
+```
+
+
+---
+
+## 剛剛的例子有點兒無聊....
+
+        # 讓 R 幫你驅邪避凶!!
+        # This is for Mac.
+        for (i in 1:5){
+                system("say 'Nann Moll Ah Mi Tow Fo'")
+                system("say 'Ah Men'")
+        }
+        # This is for Ubuntu.
+        for (i in 1:5){
+                system("espeak 'Nann Moll Ah Mi Tow Fo'")
+                system("espeak 'Ah Men'")
+        }
+        # This is for Windows.
+        for (i in 1:5){
+                system("espeak NannMollAhMiTowFo")
+                system("espeak AhMen")
+        }
+
+---
+
+# Control Flow
+
+---
+
+### if / else
+<div align='left'>Syntex:</div>
+
+    if (condition_1){
+        #Do something here....
+    } else if (conditon_2){
+        #Do something here
+    } else {
+        #Do something here
+    }
+
+<div align='left'>
+Note: else if and else are optional.
+</div>
+
+---
+
+## Exercise: SVM Classifier
+
+<div align='left'>
+<font size='6'>
+Magic Vector: <br>
+c(1.45284450, -0.04625854, 0.5211828, -1.003045, -0.4641298)
+</font>
+
+<p class='fragment'>(暫時)不要問我怎麼把這個向量生出來的。(汗)</p>
+<p class='fragment'>或許你可以問助教，助教什麼都會!</p>
+</div>
+
+
+---
+
+
+One simple way to get the data if you're using our package.
+
+```{r, results='hide'}
+data("RBasic_ForLoop_Ex")
+```
+
+
+---
+
+## Exercise: SVM Classifier
+
+<ol>
+  <li class='fragment'>計算 X1 中某一筆資料與 magic_vector 內積的結果，並儲存為 inner。<br>sum(X1[i, ] * magic_vector), i 可以是1~100任何一個整數)</li>
+  <li class='fragment'>如果 inner 大於或等於 0，print('setosa');反之，print('versicolor')</li>
+  <li class='fragment'>執行 print(y1[i])，有何發現？</li>
+</ol>
+
+<br>
+<div class='fragment'>
+<font size='6' color='red'>
+其他精彩的資料分析模型的理論與操作，敬請期待 Data Analysis 課程!
+</font>
+</div>
+
+---
+
+## While Loop
+
+<div align='left'>
+Syntex:
+</div>
+
+    while (condition_1){
+        #Do something here....
+    } 
+
+<div align='left'>
+Example:
+</div>
+
+    while (T){
+            handsome <- readline('Are you handsome?[yes or no] ')
+            if (handsome == 'yes'){
+                    print('Really....!?')
+            } else {
+                    print('Now we are talking.')
+                    break
+            }
+    }
+
+
+---
+
+## While Loop (Cont.)
+
+<img src="assets/img/while.gif" height="60%" width="60%" />
+
+### Exercise
+
+<ol>
+  <li class='fragment'>那如果要把上述程式改成電腦不斷詢問 "Do you like to code?" 呢?</li>
+  <li class='fragment'>至於要回答 'yes' or 'no' 才會停....</li>
+  <li class='fragment'>要如何避免使用者回答 'yes' 或 'no' 以外的東西呢?</li>
+</ol>
+
+---
+
+# Basic Operation
+## Phase II
+
+--- 
+
+## Arithmetic Operations
+
+<code class='ruby'>
+  +, -, *, /, %/%, %%
+</code>
+
+<div align='left'>
+<font size="5">
+All these operations are vectorized. (element-by-element operation)
+</font>
+<br>
+Examples:
+</div>
+
+```{r, results='hold'}
+my_vec1 <- c(1, 3, 5, 7); my_vec2 <- c(2, 4, 6, 8)
+
+(my_vec1 + my_vec2)
+(my_vec1 * my_vec2)
+```
+
+---
+
+## Matrix Operations
+### Multiplication and Transpose
+
+<div align='left'>
+<code>Syntax: matrix1 %*% matrix2</code>
+<br>
+Example:
+</div>
+
+```{r, results='hold'}
+set.seed(3690)
+my_mat1 <- matrix(c(1:6), 2, 3)
+my_mat2 <- matrix(runif(6), 3, 2)
+(my_mat1 %*% my_mat2) 
+```
+
+---
+
+### Solving Linear System
+
+<div align='left'>
+<code>
+<font size="6">
+Syntax: solve(A, b) <br>
+</font>
+</code>
+
+<font size='6'>Given a linear system like this:</font>
+<font size="12">
+$$
+A x = b
+$$
+</font>
+
+<font size="6">
+solve() will return:
+</font>
+
+<font size="12">
+$$
+x^*= A^{-1} b
+$$
+</font>
+</div>
+
+---
+
+<div align='left'>Examples:</div>
+
+```{r, results='hold'}
+(A <- matrix(runif(9), 3, 3))
+(A_inv <- solve(A))
+(A %*% A_inv)
+```
+
+---
+
+
+```{r, results='hold'}
+b <- c(1, 2, 3)
+A_inv_b <- solve(A, b)
+A %*% A_inv_b
+```
+
+<br>
+<div class='fragment'>
+<font size='8' color='red'>
+It's time for mini project!
+</font>
+</div>
+
+--- 
+
+# Mini Project I
+## Barnsley Fern Fractal
+
+---
+
+## Barnsley Fern Fractal
+
+<div align='left'>
+・ 起始點: <br>
+</div>
+<img src="assets/img/Barnsley_Fern_0.png" height="20%" width="20%"/>
+
+---
+
+<div align='left'>
+・ With 5% probability: <br>
+</div>
+<img src="assets/img/Barnsley_Fern_1.png" height="25%" width="25%"/>
+
+<div align='left'>
+・ With 81% probability: <br>
+</div>
+<img src="assets/img/Barnsley_Fern_2.png" height="42.5%" width="42.5%"/>
+
+<div align='left'>
+・ With 7% probability: <br>
+</div>
+<img src="assets/img/Barnsley_Fern_3.png" height="42.5%" width="42.5%"/>
+
+<div align='left'>
+・ With 7% probability: <br>
+</div>
+<img src="assets/img/Barnsley_Fern_4.png" height="42.5%" width="42.5%"/>
+
+
+---
+
+
+- 依此規則迭代出 40000 點，再把這些點畫成圖。
+- 只要用我們有學過的 **for**/**if** 迴圈和矩陣運算就可以做到這件事。
+- 你應該會看到:
+
+<img src="assets/img/Barnsley_Fern_40000.png" height="70%" width="70%" />
+
+---
+
+## Tips
+
+- 可以把迭代出來的點用一個 data.frame 存起來。(例如說存成 coor )
+
+- 最後用 plot(x = coor[, 2], y = coor[, 1], plt = c(0, 10, -5, 5), cex = 0.1, asp = 1) 把它畫出來。
+
+- 這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)
+
+
+---
+
+## Template
+
+One simple way to open the template if you're using our package.
+
+```{r, results='hide'}
+path <- DSC2014Tutorial::Basic_file("barnsley_fern_template.R")
+utils::browseURL(path)
+```
+
+<div class='fragment'>
+<font size='6'>
+敬請期待 Data Visualization 教學課程。
+</font>
+</div>
+
+
+---
+
+## The Answer
+
+<div align='left'>Reference answer</div>
+
+```{r, results='hide'}
+path <- DSC2014Tutorial::Basic_file("barnsley_fern_answer.R")
+utils::browseURL(path)
+```
+
+---
+
+# Function
+## Define Your Own Function
+
+---
+
+<div align='left'>
+<font size="6">
+Syntex: 
+</font>
+</div>
+
+    my_function <- function(arg1, arg2 = arg2_default, ...){
+            # do something here
+            
+            # return the result. (optional)
+    }
+
+
+<ol>
+  <li class='fragment'>如果在最後沒有 return() ，R 會自動回傳<strong>最後一次運算</strong>的結果。</li>
+  <li class='fragment'>強烈建議習慣性寫上 return()。</li>
+</ol>
+
+---
+
+## Define Your Own Operation
+
+```{r, results='hold'}
+`%Q_Q%` <- function(x, y){
+        return(2*x + 5*y)
+}
+2 %Q_Q% 3
+
+`%(= ww =)%` <- function(x, y, z=3){
+        return(x + 2*y + z)
+}
+2 %(= ww =)% 3
+```
+
+---
+
+## Default Values and Scoping Rule
+
+We use following example to demostrate how to set default values in function 
+and the basic scoping rule in R.
+
+```{r, results='hold', cache=FALSE}
+MyFunction <- function(x, y, z=3, ...){
+        print("x, y, z:")
+        print(c(x=x, y=y, z=z))
+        print("The rest of args:")
+        print(c(...))
+        return(x + 2*y + 6*z + sum(...))
+}
+```
+
+---
+
+## Default Values and Scoping Rule
+
+```{r, results='hold', cache=FALSE}
+MyFunction(x=1, y=3) # It works without z!! (By "default", z = 3)
+MyFunction(1, 3, 5, 2, 9) 
+```
+
+---
+
+```{r, results='hold', cache=FALSE}
+MyFunction(1, 3, 5, 2, z = 9)
+MyFunction(1, 3, 5, y = 2, x = 9)
+MyFunction(1, 3, 5, y = 2, x = 9)
+```
+
+<div class='fragment'>
+  <font color='red' size='6'>It is time for Mini Project II!</font>
+</div>
+
+---
+
+# Mini Project II
+## Battleship
+
+---
+
+## Battleship
+
+<img src="assets/img/battle_ship.gif" height="30%" width="30%" />
+
+---
+
+`接下來我們將一步步指導該如何造出這個 battleship()。`
+
+<div align='left'>
+<ul>
+  <li>首先由電腦決定一個座標。</li>
+  <li>定義一個 list 變數 map 如下</li>
+</ul>
+</div>
+
+```{r, results = 'hide'} 
+map =list(c('O', 'O', 'O', 'O', 'O'),
+          c('O', 'O', 'O', 'O', 'O'),
+          c('O', 'O', 'O', 'O', 'O'),
+          c('O', 'O', 'O', 'O', 'O'),
+          c('O', 'O', 'O', 'O', 'O'))
+```
+<div>
+<ul>
+  <li>用一個 for 迴圈把 map 中的每一個項目 print 出來。</li>
+  <li>定義一個變數 trial 並給予初始值 0 。(此變數將用於記錄玩家已經試過幾次)</li>
+  <li>用一個 while 迴圈來判斷 trial 是否超過可嘗試次數。如果沒有，更新 map 並顯示適當訊息。若已超過， break 當前迴圈。</li>
+</ul>
+</div>
+
+
+---
+
+## Template
+
+One simple way to open the template file if you are using our package.
+
+```{r, results='hide', cache=FALSE}
+path <- DSC2014Tutorial::Basic_file("battleship_template.R")
+utils::browseURL(path)
+```
+
+
+---
+
+## Some Function You Might Need
+
+<div align='left'>
+<ul>
+  <li>readline(msg)</li>
+</ul>
+</div>
+
+```{r, eval=FALSE}
+readline('Are you a girl?') # readline() 會把輸入的資料存成字串。
+```
+
+<div align='left'>
+<ul>
+  <li>sample.int(x, size)</li>
+</ul>
+</div>
+
+```{r}
+sample.int(5, 1)   # 從 1~5 中隨機抽取 1 個數字。
+```
+
+<div align='left'>
+<ul>
+  <li>cat():</li>
+</ul>
+</div>
+
+```{r, results='hold'}
+print('I love R!'); cat('I love R!')
+```
+
+---
+
+## Battleship 成品範例 
+
+```{r, results='hide', cache=FALSE}
+path <- DSC2014Tutorial::Basic_file("battleship_answer.R")
+utils::browseURL(path)
+```
+
+---
+
+# Help Yourself by Yourself
+
+---
+
+## Why?
+
+<ol>
+  <li class='fragment'>By this time, you are already a R user.</li>
+  <li class='fragment'>However, life sucks. Bugs and problems are everywhere.</li>
+  <li class='fragment'>No one can give you a hand if you does not reach out.</li>
+</ol>
+
+---
+
+## But How?
+
+> 1. ?/??: helper function in R.
+> 2. [Stack overflow](http://stackoverflow.com)
+> 3. [Google](http://google.com/)
+
+
+--- 
+
+## Thanks for Your Attention!
+
